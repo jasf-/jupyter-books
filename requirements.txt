@@ -1,8 +1,9 @@
+jupyter_contrib_nbextensions
 requests
+progressbar
 pandas
-gensim
+gensim==3.8.3
 nltk
-pandas
-pyLDAvis
+pyLDAvis==3.2.2
 matplotlib
-jupyter-notebookparams
+vaderSentiment

@@ -1,6 +1,9 @@
-stopWords.csv
+data/texts.zip
+create-n-grams.ipynb
+data/stop_words.csv
 update_tdm_client.py
 .ipynb_checkpoints/
-tdm_client.py
+clean_nbs.py
 .DS_Store
 __pycache__/
+_build/*
