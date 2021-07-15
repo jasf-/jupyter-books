@@ -1,3 +1,6 @@
+
+# I made a small change on 7/15
+
 # Constellate Collaborative Notebooks and Lessons
 Constellate is a platform to learn and perform text analysis, build datasets, and share analytics course materials. Open the black box of text analysis with [Constellate](https://constellate.org/), from JSTOR and Portico. 
 
