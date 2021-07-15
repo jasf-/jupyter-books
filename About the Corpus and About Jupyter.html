@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creating a Stopwords List &#8212; Python and Text Analysis for Absolute Beginners</title>
+    <title>About JSTOR/Portico and tdm-pilot.org &#8212; Python and Text Analysis for Absolute Beginners</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -198,7 +198,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/creating-stopwords-list-for-research.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/About the Corpus and About Jupyter.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -218,10 +218,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2Fcreating-stopwords-list-for-research.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2FAbout the Corpus and About Jupyter.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/creating-stopwords-list-for-research.ipynb"><button
+        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/About the Corpus and About Jupyter.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -241,7 +241,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/creating-stopwords-list-for-research.ipynb"><button type="button"
+        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/About the Corpus and About Jupyter.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -263,25 +263,14 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-basic-stopwords-list">
-   Create a Basic Stopwords List
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   About JSTOR/Portico and tdm-pilot.org
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#output-stop-words-to-csv-file">
-   Output
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     stop_words
-    </span>
-   </code>
-   to CSV File
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#to-read-in-the-stopwords-csv">
-   To Read in the Stopwords CSV
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-basics">
+   Jupyter basics
   </a>
  </li>
 </ul>
@@ -295,100 +284,62 @@
         
               <div>
                 
-  <p><img alt="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" class="align-left" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /><br /></p>
-<p>Created by <a class="reference external" href="http://nkelber.com">Nathan Kelber</a> and Ted Lawless for <a class="reference external" href="https://labs.jstor.org/">JSTOR Labs</a> under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC BY License</a><br />
-For questions/comments/improvements, email <a class="reference external" href="mailto:nathan&#46;kelber&#37;&#52;&#48;ithaka&#46;org">nathan<span>&#46;</span>kelber<span>&#64;</span>ithaka<span>&#46;</span>org</a>.<br /></p>
-<hr class="docutils" />
-<div class="section" id="creating-a-stopwords-list">
-<h1>Creating a Stopwords List<a class="headerlink" href="#creating-a-stopwords-list" title="Permalink to this headline">¶</a></h1>
-<p><strong>Description:</strong>
-This notebook creates a stopwords list and exports it into a CSV file. The following processes are described:</p>
+  <div class="section" id="about-jstor-portico-and-tdm-pilot-org">
+<h1>About JSTOR/Portico and <a class="reference external" href="http://tdm-pilot.org">tdm-pilot.org</a><a class="headerlink" href="#about-jstor-portico-and-tdm-pilot-org" title="Permalink to this headline">¶</a></h1>
+<p>What did I just search?</p>
 <ul class="simple">
-<li><p>Loading the NLTK stopwords list</p></li>
-<li><p>Modifying the stopwords list in Python</p></li>
-<li><p>Saving a stopwords list to a .csv file</p></li>
-<li><p>Loading a stopwords list from a .csv file</p></li>
+<li><p>The text mining platform includes all of JSTOR plus the content from those Portico publishers who choose to participate (currently, 30 publishers including John Wiley &amp; Sons, Inc., Project Muse, Thieme Publishing Group, and Hindawi).</p></li>
+<li><p>By the numbers: All told, the above includes content from 2000+ publishers, 5500+ journals, and 19 million articles</p></li>
+<li><p>Content from Chronicling America (historic newspapers) and CORD (a COVID-19 collection) has recently been added, and discussions with other providers are underway.</p></li>
 </ul>
-<p><strong>Use Case:</strong> For Researchers (Mostly code without explanation, not ideal for learners)</p>
-<p><a class="reference internal" href="creating-stopwords-list.html"><span class="doc std std-doc">Take me to the <strong>Learning Version</strong> of this notebook -&gt;</span></a></p>
-<p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Completion time:</strong> 5 minutes</p>
-<p><strong>Knowledge Required:</strong></p>
+<p>Note: Our institution has an agreement with JSTOR/Portico, so we have permission to do this.</p>
+<p>That slick interface that you used at <a class="reference external" href="http://tdm-pilot.org">tdm-pilot.org</a> is mostly intended to give you a peek into what’s in your dataset.  For more detailed work, we’re going to pull that dataset you generated into a Jupyter Notebook.</p>
+<p><strong>Guess what?  You’re using a Jupyter Notebook right now!</strong></p>
+</div>
+<div class="section" id="jupyter-basics">
+<h1>Jupyter basics<a class="headerlink" href="#jupyter-basics" title="Permalink to this headline">¶</a></h1>
+<p>What is this thing?</p>
+<p><strong>Jupyter combines interwoven text, data, and code, in a format that runs in a web browser.</strong></p>
 <ul class="simple">
-<li><p>Python Basics Series (<a class="reference internal" href="python-basics-1.html"><span class="doc std std-doc">Start Python Basics I</span></a>)</p></li>
+<li><p>‘Jupyter’ = JUlia, PYthon, and R - but it’s really language-agnostic</p></li>
+<li><p>Jupyter Notebooks let you run code immediately</p></li>
+<li><p>Jupyter Notebooks can connect to a server that has the right environment/dependencies to execute the code successfully. In this case, we’re using a server provided by ITHAKA, parent company to JSTOR/Portico.</p></li>
 </ul>
-<p><strong>Knowledge Recommended:</strong> None</p>
-<p><strong>Data Format:</strong> CSV files</p>
-<p><strong>Libraries Used:</strong></p>
+<p>Jupyter Notebooks are collections of <strong>cells that do different things.</strong></p>
+<p>You can <strong>navigate</strong> through the cells of a notebook (including this one) by using the <strong>‘run’ command</strong> in the toolbar above.</p>
+<p><strong>What do the cells do?</strong>  For this exercise, we’ll talk about 2 kinds of cells.</p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://docs.constellate.org/key-terms/#nltk">nltk</a></strong> to create an initial stopwords list</p></li>
-<li><p><strong>csv</strong> to read and write the stopwords to a file</p></li>
+<li><p>This cell is an example of a <strong>markdown</strong> cell.  Markdown cells just contain text, and are used for commenting code, creating headings, etc.</p></li>
+<li><p>There are also executable <strong>code cells</strong>.</p>
+<ul>
+<li><p>How does this magic happen?  There’s a kernel, or computational engine, that runs the code inside your Notebook.  In this case our kernel = Python 3, as you can see in the top right corner of this page under the ‘logout’ button.</p></li>
 </ul>
-<p><strong>Research Pipeline:</strong> None</p>
-<hr class="docutils" />
-<div class="section" id="create-a-basic-stopwords-list">
-<h2>Create a Basic Stopwords List<a class="headerlink" href="#create-a-basic-stopwords-list" title="Permalink to this headline">¶</a></h2>
+</li>
+</ul>
+<p>Let’s try running a simple code cell to see what happens. Don’t worry, you can’t break it! If you get stuck you can always reset the notebook by resetting the kernel (the ‘refresh’ symbol in the toolbar).</p>
+<p>Modify the cell below by:</p>
+<ol class="simple">
+<li><p>Selecting the cell. The cell will be highlighted in <font color='blue'><strong>blue</strong></font> when selected, then will change to <font color='green'><strong>green</strong></font> when you begin to edit it</p></li>
+<li><p>Delete the text that says <font color='red'><strong>‘yourname’</strong></font> (but keep the ’ ‘marks)</p></li>
+<li><p>Type your name inside the ’  ‘s instead, and finally</p></li>
+<li><p>Hit ‘Run’ in the toolbar above.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start from NLTK</span>
-<span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span> <span class="c1"># Import stopwords from nltk.corpus</span>
-<span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span> <span class="c1"># Create a list `stop_words` that contains the English stop words list</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_hey</span><span class="p">(</span><span class="n">recipient</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;Hey, </span><span class="si">{}</span><span class="s1">!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recipient</span><span class="p">)</span>
+<span class="n">print_hey</span><span class="p">(</span><span class="s1">&#39;yourname&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start from Gensim. Creates a list from a frozen set. </span>
-<span class="kn">import</span> <span class="nn">gensim</span>
-<span class="kn">from</span> <span class="nn">gensim.parsing.preprocessing</span> <span class="kn">import</span> <span class="n">STOPWORDS</span>
-
-<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">STOPWORDS</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start from spaCy. </span>
-<span class="kn">import</span> <span class="nn">spacy</span>
-<span class="n">sp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;en_core_web_sm&#39;</span><span class="p">)</span>
-
-<span class="n">stop_words</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Defaults</span><span class="o">.</span><span class="n">stop_words</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="output-stop-words-to-csv-file">
-<h2>Output <code class="docutils literal notranslate"><span class="pre">stop_words</span></code> to CSV File<a class="headerlink" href="#output-stop-words-to-csv-file" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output stop_words to a CSV file</span>
-
-<span class="kn">import</span> <span class="nn">csv</span> <span class="c1"># Import the csv module to work with csv files</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/stop_words.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">stop_words</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="to-read-in-the-stopwords-csv">
-<h2>To Read in the Stopwords CSV<a class="headerlink" href="#to-read-in-the-stopwords-csv" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open the CSV file and list the contents</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/stop_words.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">stop_words</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+<p>As you can see, when you run a code cell the output appears below it in another cell. The output after you run a cell essentially forms part of the document as you work through it.</p>
+<p>You may have noticed the In [ # ] and Out [ # ] to the left of the cells above. The notebook will number functions in the order that you run the cells. In general, you’ll want to run cells in sequential order as you work through a notebook to avoid errors.</p>
+<p>Finally, Jupyter shows that a cell is currently running by displaying an asterisk in the brackets like so: [ * ]  The small circle next to ‘Python 3’ at the top right of the page also gives insight into the status of the kernel; hover over it for a tooltip if you’re not sure what state it’s in.</p>
+<p>Those are the basics of using Jupyter Notebooks.  Next we’ll start working with our dataset.  If you built your own dataset, you’ll want to have the ID handy – you can find it here:</p>
+<p><img alt="CopyDatasetID.png" src="attachment:CopyDatasetID.png" /></p>
+<p>Head back to the ‘Home’ tab to begin the next notebook.</p>
+<p><img alt="HomeTab.png" src="attachment:HomeTab.png" /></p>
 </div>
 
     <script type="text/x-thebe-config">

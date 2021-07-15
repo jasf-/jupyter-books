@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Counter Objects &#8212; Python and Text Analysis for Absolute Beginners</title>
+    <title>Quantifying characteristics of documents in your dataset &#8212; Python and Text Analysis for Absolute Beginners</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -198,7 +198,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/counter-objects.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/21May Count and Visualize.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -218,10 +218,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2Fcounter-objects.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2F21May Count and Visualize.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/counter-objects.ipynb"><button
+        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/21May Count and Visualize.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -241,7 +241,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/counter-objects.ipynb"><button type="button"
+        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/21May Count and Visualize.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -258,19 +258,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-counter-container-datatype">
-   The Counter Container Datatype
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -279,129 +266,144 @@
         
               <div>
                 
-  <p><img alt="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" class="align-left" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /><br /></p>
-<p>Created by <a class="reference external" href="http://nkelber.com">Nathan Kelber</a> and Ted Lawless for <a class="reference external" href="https://labs.jstor.org/">JSTOR Labs</a> under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC BY License</a><br />
-For questions/comments/improvements, email <a class="reference external" href="mailto:nathan&#46;kelber&#37;&#52;&#48;ithaka&#46;org">nathan<span>&#46;</span>kelber<span>&#64;</span>ithaka<span>&#46;</span>org</a>.<br /></p>
-<hr class="docutils" />
-<div class="section" id="counter-objects">
-<h1>Counter Objects<a class="headerlink" href="#counter-objects" title="Permalink to this headline">¶</a></h1>
-<p><strong>Description:</strong> This notebook describes:</p>
+  <p><font color ='gray'> <a class="reference external" href="https://hub.binder.tdm-pilot.org/user/jasf--tdm-nbs-6ywmisk4/notebooks/About%20the%20Corpus%20and%20About%20Jupyter.ipynb">Start here</a> with ‘About the Corpus/About Jupyter’ </font></p>
+<div class="section" id="quantifying-characteristics-of-documents-in-your-dataset">
+<h1>Quantifying characteristics of documents in your dataset<a class="headerlink" href="#quantifying-characteristics-of-documents-in-your-dataset" title="Permalink to this headline">¶</a></h1>
+<p>This notebook demonstrates how to quantify and ultimately visualize some characteristics of your dataset.  It includes steps to:</p>
 <ul class="simple">
-<li><p>What a Counter object is</p></li>
-<li><p>The difference between counters and dictionaries</p></li>
-<li><p>Using Counter objects for finding the most common elements</p></li>
+<li><p>Import software that will let us visualize our data</p></li>
+<li><p>Examine metadata from our documents</p></li>
+<li><p>Look at quantitative characteristics of our datasets to answer and visualize our ultimate question:</p></li>
+<li><p><strong>Are the documents containing my keywords getting longer over time?</strong></p></li>
 </ul>
-<p><strong>Use Case:</strong> For Learners (Detailed explanation, not ideal for researchers)</p>
-<p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Completion Time:</strong> 20 minutes</p>
-<p><strong>Knowledge Required:</strong></p>
-<ul class="simple">
-<li><p>Python Basics Series (<a class="reference internal" href="python-basics-1.html"><span class="doc std std-doc">Start Python Basics I</span></a>)</p></li>
-</ul>
-<p><strong>Knowledge Recommended:</strong> None</p>
-<p><strong>Data Format:</strong> None</p>
-<p><strong>Libraries Used:</strong> Counter from Collections</p>
-<p><strong>Research Pipeline:</strong> None</p>
-<hr class="docutils" />
-<div class="section" id="the-counter-container-datatype">
-<h2>The Counter Container Datatype<a class="headerlink" href="#the-counter-container-datatype" title="Permalink to this headline">¶</a></h2>
-<p>A Counter is very similar to a dictionary, where the key is some variable and the value keeps count of the number of times it occurs. As the name suggests, Counters are very useful for counting the occurence of objects. We can create a Counter object from a list.</p>
+<p>A quick note before we get started. As you work through this notebook you’ll see cells marked <em><strong>‘optional’</strong></em>. These are opportunities for you to try modifying and applying Python code to see what happens. I encourage you to try them, but you can also just run the notebook as written.</p>
+<p>Let’s do this! First we’ll bring in pandas, which is a software library that will help us visualize our data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Counter object created from a list</span>
-<span class="n">sample_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we import the Dataset module from the tdm_client library. The tdm_client library contains functions for connecting to the JSTOR server containing our corpus dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tdm_client</span> <span class="kn">import</span> <span class="n">Dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To analyze your dataset, use the <a class="reference external" href="./key-terms.ipynb/#dataset-ID">dataset ID</a> provided when you created your <a class="reference external" href="./key-terms.ipynb/#dataset">dataset</a>. It should look like a long series of characters surrounded by dashes.</p>
+<p>We create a new variable <strong>dset</strong> and initialize its value using the <strong>Dataset</strong> function. A sample <strong>dataset ID</strong> of data derived from searching JSTOR for ‘antibiotic’ and ‘resistance’ and ‘coli’ is provided here (‘06390cab-0bd5-5e5a-de2a-695d0b47f904’). Deleting that dataset ID and pasting your unique <strong>dataset ID</strong> instead will import your dataset from the JSTOR server.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">(</span><span class="s1">&#39;06390cab-0bd5-5e5a-de2a-695d0b47f904&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before we go further, let’s double-check to make sure we have the correct dataset. We can look at the original query by using the query_text method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dset</span><span class="o">.</span><span class="n">query_text</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s take a look at what’s in there!  We can find the total number of documents in the dataset using the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">dset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next command pulls the metadata elements out of our dataset. (No output will show.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="n">dset</span><span class="o">.</span><span class="n">get_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s look at a sample. The following command prints metadata for the first document in the set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="p">[</span><span class="mi">14</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Copy the ‘ID’ (URL) in the first line above and paste it into a separate browser tab or window.<br />
+It should look like a journal article, unsurprisingly.</p>
+<p><em>Optional: How would you print metadata for the <strong>6th</strong> document in this set?  Try it in the code block below.</em></p>
+<p>We grabbed the metadata successfully, but that big block of text isn’t too pretty.</p>
+<p>We can convert that metadata to a pandas DataFrame to take advantage of its plotting and manipulation functions. This will present our metadata in a table-like format, and help us learn more about what’s in our dataset.</p>
+<p>First we define this new dataframe as ‘df’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we’ll organize the first 4 rows (aka documents) of the DataFrame we named ‘df’ into a table with a header, and take a look at their metadata.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s a little easier on the eyes!</p>
+<p><em>Optional:  How would you look at the <strong>last 5</strong> documents in the dataframe?  Try it in the code block below. (Hint: the opposite of ‘head’ is ‘tail’).</em></p>
+<p>Ultimately we’re trying to figure out whether the documents in our dataset are getting longer over time.  We’ll take a few steps to do that.</p>
+<p>First, let’s take a look at the years these documents were published.  The following code will show us the publication year range.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minYear</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;publicationYear&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">maxYear</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;publicationYear&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="n">Counter</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">minYear</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; to &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">maxYear</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can also create a Counter object from a dictionary.</p>
+<p>The code to find the word count range in our documents looks very similar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Counter object created from a dictionary</span>
-<span class="n">sample_dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-<span class="n">Counter</span><span class="p">(</span><span class="n">sample_dictionary</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>The contents of a Counter object may look identical to a dictionary, but there are some significant differences. Let’s imagine we are using our Counter object to count the occurences of five words in a text</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An example dictionary with key/value pairs of words and numbers</span>
-<span class="n">wordcounts_dictionary</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;word_a&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
-    <span class="s1">&#39;word_b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s1">&#39;word_c&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="s1">&#39;word_d&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="s1">&#39;word_e&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">}</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minWords</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;wordCount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">maxWords</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;wordCount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
-<span class="c1"># Create a Counter object `wordcounts_counter` from `wordcounts_dictionary`</span>
-<span class="n">wordcounts_counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">wordcounts_dictionary</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wordcounts_counter</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">minWords</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; to &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">maxWords</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The Counter object looks just like a dictionary inside the parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> of <code class="docutils literal notranslate"><span class="pre">Counter()</span></code>. Both dictionaries and counters can return a <strong>value</strong> from a <strong>key</strong>.</p>
+<p><em>Optional:  How would you modify the code above to count the <strong>page range</strong> in your set of documents?  Give it a try in the code cell below.</em></p>
+<p><em>Optional:  Run the code cell below to find the mean number of words in the documents in your dataset.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Returning a value for a given key in Python dictionaries vs. Counter objects</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wordcounts_dictionary</span><span class="p">[</span><span class="s1">&#39;word_a&#39;</span><span class="p">])</span> <span class="c1"># Using a dictionary</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wordcounts_counter</span><span class="p">[</span><span class="s1">&#39;word_a&#39;</span><span class="p">])</span>  <span class="c1"># Using a Counter</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meanWords</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;wordCount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">meanWords</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>However, the <code class="docutils literal notranslate"><span class="pre">Counter()</span></code> has some helpful differences from a dictionary. One difference is that a <code class="docutils literal notranslate"><span class="pre">Counter()</span></code> returns a 0 when no such key exists.</p>
+<p><strong>Grand finale time!</strong></p>
+<p>Now that we know a bit more about the documents in our dataset, we’ll visualize the dataset to see if documents containing our keywords are getting longer over time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With a Counter, the value of the made-up key `no_such_key_exists` is 0. </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wordcounts_counter</span><span class="p">[</span><span class="s1">&#39;no_such_key_exists&#39;</span><span class="p">])</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;publicationYear&#39;</span><span class="p">,</span> <span class="s1">&#39;wordCount&#39;</span><span class="p">])[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>\
+    <span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Word count by year&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span> 
 </pre></div>
 </div>
 </div>
 </div>
-<p>If a key is not in a dictionary, Python returns a KeyError.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With a dictionary, the value of the made-up key `no_such_key_exists` causes a KeyError in Python</span>
-<span class="c1"># print(wordcounts_dictionary[&#39;no_such_key_exists&#39;]) </span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>If we wanted to overcome this difficulty using a dictionary, we could use the <code class="docutils literal notranslate"><span class="pre">.get()</span></code> method for retrieving values from a given key.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A demonstration of returning a string when no such key exists</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wordcounts_dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;no_such_key_exists&#39;</span><span class="p">))</span> <span class="c1"># If no key is found, `None` is returned</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wordcounts_dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;no_such_key_exists&#39;</span><span class="p">,</span> <span class="s1">&#39;No such key&#39;</span><span class="p">))</span> <span class="c1"># We can also supply a second argument that defines a string to be returned</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>The Counter object, however, is also useful for a second purpose. Counter objects can be easily sorted using the <code class="docutils literal notranslate"><span class="pre">most_common()</span></code> method. We can specify an argument with this method to receive a certain number of results. Let’s try it on our example <code class="docutils literal notranslate"><span class="pre">wordcounts_counter</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wordcounts_counter</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Print the top 3 most common items in `counter_demo`</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>There is no least_common method, but we can get the least commmon element using a negative index or slice.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The least common element is at index -1</span>
-<span class="n">wordcounts_counter</span><span class="o">.</span><span class="n">most_common</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>The final advantage of the Counter object is that it is a “high performance” container type, so it is able to process large amounts of data very quickly. Counter objects are the preferred method for working quickly and efficiently with counted elements in Python.</p>
-</div>
+<p>This might take a while to run, especially if your dataset is large.<br />
+Recall that if the kernel is working you’ll see this <strong>In [ * ]</strong> to the left of the cell.</p>
+<p>What do you think – are documents with your search terms getting longer over time?</p>
+<p>Want to learn more and/or try setting up your own Jupyter Notebook?   <a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/">This is a great tutorial.</a></p>
 </div>
 
     <script type="text/x-thebe-config">

@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jupyter basics &#8212; Python and Text Analysis for Absolute Beginners</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/NU_Library_redblack.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python and Text Analysis for Absolute Beginners</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/intro.html">
+   About
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  The Course
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/schedule.html">
+   Course Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/syllabus.html">
+   Course Syllabus
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Open Educational Directory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/all-notebooks.html">
+   Open Notebook Lessons Directory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/add-my-lesson.html">
+   Add your lesson or class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs/how-to-create-a-course-website">
+   Create Course from this template
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org">
+   Constellate Platform
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs">
+   Constellate Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs/key-terms">
+   Text Analysis Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://jupyterbook.org/intro.html">
+   Jupyter Book Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/keep-learning.html">
+   More ways to keep learning
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/jasfeditedPyNb.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jasf-/py-tdm-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2FjasfeditedPyNb.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/jasfeditedPyNb.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/jasfeditedPyNb.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Jupyter basics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cells">
+     Cells
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modifying-a-cell">
+     Modifying a Cell
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hello-world-your-first-code">
+     Hello World: Your First Code
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#option-one">
+       Option One
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#option-two">
+       Option Two
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#go-ahead-scroll-back-up-run-that-hello-world-code-cell-and-see-what-happens">
+       Go ahead - scroll back up, run that ‘Hello World’ code cell and see what happens!
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#what-if-i-get-stuck">
+       What if I get stuck?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#outputs-brackets-numbers-and-asterisks">
+       Outputs, brackets, numbers, and asterisks
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-and-deleting-cells">
+     Creating and Deleting Cells
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-basics">
+   Python basics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#expressions-and-operators">
+     Expressions and Operators
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-types-numerical-integers-floats-and-strings">
+     Data Types: Numerical (Integers &amp; Floats) and Strings
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables">
+     Variables
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-naming-rules">
+     Variable Naming Rules
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions">
+     Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-steps">
+   Next steps
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" class="align-left" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /><br /></p>
+<p>Adapted by <a class="reference external" href="https://library.northeastern.edu/about/library-staff-directory/jen-ferguson">Jen Ferguson</a> from notebooks created by <a class="reference external" href="http://nkelber.com">Nathan Kelber</a> and Ted Lawless for <a class="reference external" href="https://labs.jstor.org/">JSTOR Labs</a> under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC BY License</a>.<br /> See <a class="reference external" href="https://docs.tdm-pilot.org/tag/beginner-lessons/">here</a> for the original versions. Some contents were adapted from a notebook created by <a class="reference external" href="https://library.northeastern.edu/about/library-staff-directory/sarah-connell">Sarah Connell</a> for an earlier version of this workshop.<br /></p>
+<hr class="docutils" />
+<div class="section" id="jupyter-basics">
+<h1>Jupyter basics<a class="headerlink" href="#jupyter-basics" title="Permalink to this headline">¶</a></h1>
+<p>What is this thing?</p>
+<p><strong><a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/latest/notebook.html">Jupyter</a> combines text, data, and code, in a format that runs inside a web browser.</strong></p>
+<ul class="simple">
+<li><p>‘Jupyter’ = JUlia, PYthon, and R - but it’s really language-agnostic</p></li>
+<li><p>Jupyter Notebooks let <em>us</em> create and share workshop content interwoven with interactive, executable code all in the same place.</p></li>
+<li><p>Jupyter Notebooks let <em>you</em> run code immediately. No need to download or install anything!</p></li>
+<li><p>Jupyter Notebooks can connect to a server that has the right environment/dependencies to execute code successfully.</p></li>
+</ul>
+<p>If you’re curious about how we have this set up, read on:</p>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://binder.constellate.org/">Binder</a></strong> is the <em>environment</em> we are using to access (“run”) our Jupyter Notebooks inside a browser. It’s kind of like a separate computer in the cloud that makes all of tools we need to use in Jupyter Notebooks work. We’re using <a class="reference external" href="https://constellate.org/">Contellate’s</a> Binder for this session, but anyone can <a class="reference external" href="https://mybinder.org/">create their own Binder</a>.</p></li>
+<li><p>We use <strong><a class="reference external" href="https://github.com/jasf-/tdm-nbs">Github</a></strong> to store the Jupyter Notebooks (.ipynb files) for this session. Like any other computer, Binder will power down after a while–basically after a certain period of inactivity. So we need a place to make our Jupyter Notebooks available, and tell Binder where to find them the next time we start up a Binder session to interact with our notebooks.</p></li>
+</ul>
+<div class="section" id="cells">
+<h2>Cells<a class="headerlink" href="#cells" title="Permalink to this headline">¶</a></h2>
+<p>Similar to the way an essay is composed of paragraphs, Jupyter notebooks are composed of <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#cell">cells</a>. A cell is like a container for a particular kind of content. There are essentially two kinds of content in Jupyter notebooks:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#markdown-cell">Markdown Cells</a>—These can contain text, images, video, and the other kinds of explanatory content you might find on a regular website. The cell you’re reading right now is a markdown cell.</p></li>
+<li><p><a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#code-cell">Code Cells</a>—These can contain code written in a variety of languages.</p></li>
+</ol>
+<p>How does this magic happen? There’s a kernel, or computational engine, that runs the code inside your notebook. In this case our kernel is Python 3, as you can see in the top right corner of this page under the ‘logout’ button.</p>
+<p>Markdown allows you to have some basic formatting, like <em>italicizing</em>, <strong>bolding</strong>, and adding <font color=fuchsia><strong>colors</strong></font> to text. For more on markdown, see <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">this guide</a>.</p>
+<p>A <strong>code cell</strong> can be distinguished from a <strong>markdown cell</strong> by the fact that it contains a pair of brackets with a colon to its left.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a code cell </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A markdown cell provides information, but a code cell can be executed to perform an action. The code cell above does not contain any executable content, only a text comment. We can tell the text in the code cell is a comment because it is prefixed by a <code class="docutils literal notranslate"><span class="pre">#</span></code>. In Python, if a line is prefaced by a <code class="docutils literal notranslate"><span class="pre">#</span></code> then that line is a comment and will not be executed if the code is run. In a code cell, comments are bluish-green in color.</p>
+</div>
+<div class="section" id="modifying-a-cell">
+<h2>Modifying a Cell<a class="headerlink" href="#modifying-a-cell" title="Permalink to this headline">¶</a></h2>
+<p>The text in code cells can be quickly changed just by typing in the cell. In order to change the content of a markdown cell, you need to expose the markdown content by double-clicking the cell. This will reveal the plain text of the markdown that creates various elements like headings, links, images, etc. When you want the cell to render again, you can simply run it by pushing the play button or pressing Ctrl + Enter (Windows) or shift + return (OS X) on your keyboard.</p>
+</div>
+<div class="section" id="hello-world-your-first-code">
+<h2>Hello World: Your First Code<a class="headerlink" href="#hello-world-your-first-code" title="Permalink to this headline">¶</a></h2>
+<p>It is traditional in programming education to begin with a program that prints <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code>. In Python, this is a simple task using the <code class="docutils literal notranslate"><span class="pre">print()</span></code> <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#function">function</a>. A function is a block of code that performs some action—we will cover functions in more detail below. This function simply prints out whatever is inside the parentheses. We will <strong>pass</strong> the quotation ‘Hello World’ to the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function like so:</p>
+<p><code class="docutils literal notranslate"><span class="pre">print('Hello</span> <span class="pre">World')</span></code></p>
+<p>The code cell below has the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function set up to get you started, so all you need to do is write the text you want to print (in this case, ‘Hello World’). Here’s how:</p>
+<ol class="simple">
+<li><p>First, select the cell to modify it. The cell will be highlighted in <font color='blue'><strong>blue</strong></font> when selected, then will change to <font color='green'><strong>green</strong></font> when you begin to edit it</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">World'</span></code> inside the parentheses (including the ’ ’ marks)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Fill in &#39;Hello World!&#39; inside of the &#39;&#39; marks below</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we’re ready to run this code. To <strong>execute</strong> or <strong>run</strong> our code, we have a couple of options:</p>
+<div class="section" id="option-one">
+<h3>Option One<a class="headerlink" href="#option-one" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Image of play button" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/play_button.png" /> Click the code cell you wish to run and then push the “Run” button above. Depending on how your notebook is set up, you might not see the word “Run” but you should still see the same triangle symbol.</p>
+</div>
+<div class="section" id="option-two">
+<h3>Option Two<a class="headerlink" href="#option-two" title="Permalink to this headline">¶</a></h3>
+<p>Click in the code cell you wish to run and press Ctrl + Enter (Windows) or shift + return (OS X) on your keyboard. Control + return also works on Macs.</p>
+</div>
+<div class="section" id="go-ahead-scroll-back-up-run-that-hello-world-code-cell-and-see-what-happens">
+<h3>Go ahead - scroll back up, run that ‘Hello World’ code cell and see what happens!<a class="headerlink" href="#go-ahead-scroll-back-up-run-that-hello-world-code-cell-and-see-what-happens" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="what-if-i-get-stuck">
+<h3>What if I get stuck?<a class="headerlink" href="#what-if-i-get-stuck" title="Permalink to this headline">¶</a></h3>
+<p>Don’t worry, you can’t break anything in this notebook! Any changes you make to a Jupyter notebook - any edits - are not saved by default.</p>
+<p><strong><font color=red>If you get stuck at any point, you can always reset the notebook by resetting the kernel (the ‘refresh’ symbol in the toolbar).</font></strong></p>
+</div>
+<div class="section" id="outputs-brackets-numbers-and-asterisks">
+<h3>Outputs, brackets, numbers, and asterisks<a class="headerlink" href="#outputs-brackets-numbers-and-asterisks" title="Permalink to this headline">¶</a></h3>
+<p>As you saw with ‘Hello World!’, after you run a code cell the output typically appears below it in another cell. The output after you run a cell essentially forms part of the document as you work through it. Note that some code cells will not result in any visible output.</p>
+<p>A number will appear inside the brackets to the left of the code cell to show the order the cell was run. If your code is complicated or takes some time to execute, an asterisk * will be displayed in the pair of brackets while the code executes. You’ll also see this in action during the text analysis section.</p>
+<p>We’re going to prove the above principle to ourselves by executing the code cell below which will:</p>
+<ol class="simple">
+<li><p>Print the phrase “Waiting 10 seconds…”</p></li>
+<li><p>Wait 10 seconds, then</p></li>
+<li><p>Print “Done”</p></li>
+</ol>
+<p>As the program is running, watch the pair of brackets and you will see the code is running <code class="docutils literal notranslate"><span class="pre">[*]:</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Waiting 10 seconds...&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you missed the asterisk, you can run the code cell as many times as you like. Notice that each time you run a code cell, the number inside the brackets increases. This keeps track of the order in which cells were run.</p>
+<p>It is usually a good practice to run code cells sequentially from top to bottom to avoid potential errors.</p>
+</div>
+</div>
+<div class="section" id="creating-and-deleting-cells">
+<h2>Creating and Deleting Cells<a class="headerlink" href="#creating-and-deleting-cells" title="Permalink to this headline">¶</a></h2>
+<p><img alt="The + symbol to create a new cell" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/new_cell.png" />To create a new cell, click the + at the top of the menu. A new cell will be created immediately underneath the currently selected cell.
+By default, a <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#code-cell">code cell</a> is created. To change the cell type, click on the dropdown menu at the top to switch from “Code” to “Markdown.”</p>
+<p>Go ahead, try adding a new cell! You can either keep the new blank cell you just added, or remove it by selecting it and then cut it by using the scissors icon next to the + in the menu.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="python-basics">
+<h1>Python basics<a class="headerlink" href="#python-basics" title="Permalink to this headline">¶</a></h1>
+<p>Now that we’ve covered the basics of how Jupyter notebooks work, we’re going to switch gears and talk about Python. Python is a widely used computer programming language. We’ll cover a few Python basics here, just enough so you can understand some core concepts and run several pre-constructed text analyses to work with your corpus in the next part of this workshop. If you’d like to learn more, Constellate has published <a class="reference external" href="https://docs.tdm-pilot.org/">lessons</a> running from beginner to intermediate, and there are many additional resources online for learning Python, such as <a class="reference external" href="https://www.py4e.com/">Python for Everybody</a>.</p>
+<div class="section" id="expressions-and-operators">
+<h2>Expressions and Operators<a class="headerlink" href="#expressions-and-operators" title="Permalink to this headline">¶</a></h2>
+<p>One very simple form of Python programming is an <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#expression">expression</a> using an <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#operator">operator</a>. For example, you might have a simple mathematical statement like:</p>
+<blockquote>
+<div><p>1 + 3</p>
+</div></blockquote>
+<p>The <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#operator">operator</a> in this case is <code class="docutils literal notranslate"><span class="pre">+</span></code>, sometimes called “plus” or “addition”. This particular <strong><a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#expression">expression</a></strong> is a combination of two <strong>values</strong> (1 and 3) and an <strong>operator</strong> (<code class="docutils literal notranslate"><span class="pre">+</span></code>). In Python, <strong>expressions</strong> are combinations of values, operators, and variables (more on this last item soon!).</p>
+<p>In the code block below, try writing an expression that uses the addition operator.</p>
+<p>You can also do subtraction, multiplication, and division, among other mathematical operations. To multiply in Python, you use an asterisk (*) and to divide, you use a forward slash (/).</p>
+<p>You are probably not going to replace the calculator on your phone with Python! But, even this simple example is showing you something about Python works: here, you are creating an <strong>expression</strong> by combining <strong>values</strong> with an <strong>operator</strong> and running the code to produce <strong>output</strong>.</p>
+<p>We’re not going to get into it now, but it’s worth knowing that mathematical operations in Python follow the “PEMDAS” rules for order of operations: parentheses; exponents; multiplication and division, left to right; and addition and subtraction, left to right.</p>
+</div>
+<div class="section" id="data-types-numerical-integers-floats-and-strings">
+<h2>Data Types: Numerical (Integers &amp; Floats) and Strings<a class="headerlink" href="#data-types-numerical-integers-floats-and-strings" title="Permalink to this headline">¶</a></h2>
+<p>All <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#expression">expressions</a> evaluate to a single value. In the above examples, our expressions evaluated to single numerical value.</p>
+<p>Numerical values come in two basic forms:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#integer">integer</a></p></li>
+<li><p><a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#float">float</a> (or floating-point number)</p></li>
+</ul>
+<p>An <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#integer">integer</a>, what we sometimes call a “whole number”, is a number without a decimal point that can be positive or negative. When a value uses a decimal, it is called a <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#float">float</a> or floating-point number.</p>
+<p>Python can also help us manipulate text. A snippet of text in Python is called a <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#string">string</a>. A string can be written with single or double quotes. A string can use letters, spaces, line breaks, and numbers. So 5 is an integer and 5.0 is a float, but ‘5’ and ‘5.0’ are strings. A string can also be blank, such as ‘’.</p>
+<p>The distinction between each of these data types may seem unimportant, but Python treats each one differently. For example, we can ask Python whether an integer is equal to a float, but we cannot ask whether a string is equal to an integer or a float.</p>
+<p>To evaluate whether two values are equal, we can use two equals signs between them. The expression will evaluate to either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run this code cell to determine whether the values are equal</span>
+<span class="mi">42</span> <span class="o">==</span> <span class="mf">42.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run this code cell to compare an integer with a string</span>
+<span class="mi">15</span> <span class="o">==</span> <span class="s1">&#39;15&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we use the addition operator on integers or floats, they are added to create a sum. When we use the addition operator on strings, they are combined into a single, longer string. This is called <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#concatenation">concatenation</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combine the strings &#39;Hello&#39; and &#39;World&#39;</span>
+<span class="s1">&#39;Hello&#39;</span> <span class="o">+</span> <span class="s1">&#39;World&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that the strings are combined exactly as they are written, meaning that there is no space between the strings. If we want to include a space, we need to add the space to the end of ‘Hello’ or the beginning of ‘World’. We can also concatenate multiple strings.</p>
+<p>When we use the addition operator, the values must be all numbers or all strings. Combining them will create an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try adding a string to an integer</span>
+<span class="s1">&#39;55&#39;</span> <span class="o">+</span> <span class="mi">23</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, we receive an error because Python doesn’t know how to join a string to an integer. Putting this another way, Python is unsure if we want:</p>
+<blockquote>
+<div><p>‘55’ + 23</p>
+</div></blockquote>
+<p>to become</p>
+<blockquote>
+<div><p>‘5523’</p>
+</div></blockquote>
+<p>or</p>
+<blockquote>
+<div><p>78</p>
+</div></blockquote>
+<p>Because these data types operate differently, it can be useful to be able to check which type you’re working with if a bit of code is giving an error. You can do this with the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function. Try running the code blocks below to check the types for 15, 15.0 and “15”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Check the type for 15</span>
+<span class="nb">type</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Check the type for &quot;15&quot;</span>
+<span class="nb">type</span><span class="p">(</span><span class="s2">&quot;15&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>We noted above that expressions are combinations of values, operators, and variables, and said that we’d be returning to variables. A <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#variable">variable</a> is like a container that stores information. There are many kinds of information that can be stored in a variable, including the data types we have already discussed (integers, floats, and strings). We create (or <strong>initialize</strong>) a variable with an <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#assignment-statement">assignment statement</a>. The assignment statement gives the variable an initial value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an integer variable (note that this code doesn&#39;t produce any output; it just establishes the variable)</span>
+<span class="n">new_integer_variable</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add 36 to our integer variable</span>
+<span class="n">new_integer_variable</span> <span class="o">+</span> <span class="mi">36</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The value of a variable can be overwritten with a new value. You can test this by changing the value in the first code block above, and then re-running both blocks. Or, we can replace the value within the same block, using comments:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Overwrite the value of my_favorite_number when the commented-out line of code is executed. </span>
+<span class="c1"># Remove the # in the line &quot;#my_favorite_number = 2&quot; to turn the line into executable code.</span>
+
+<span class="n">my_favorite_number</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="c1">#my_favorite_number = 2</span>
+<span class="n">my_favorite_number</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Whenever you create a new variable, you can always confirm what data type it is with the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Checking the type of the variable my_favorite_number</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">my_favorite_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can create a variable with almost any name, but there are a few guidelines that are recommended. First, variable names should be clear and descriptive. Consider this bit of code that will compute the number of seconds in 3 days:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute the number of seconds in 3 days</span>
+<span class="n">days</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">hours_in_day</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">minutes_in_hour</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">seconds_in_minute</span> <span class="o">=</span> <span class="mi">60</span>
+
+<span class="n">days</span> <span class="o">*</span> <span class="n">hours_in_day</span> <span class="o">*</span> <span class="n">minutes_in_hour</span> <span class="o">*</span> <span class="n">seconds_in_minute</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the code cell above, we created a variable that stores the number of minutes in an hour and called it <code class="docutils literal notranslate"><span class="pre">minutes_in_hour</span></code>. It is a kindness to anyone viewing your code, not to mention your future self, to give your variables names that clearly communicate what value is stored in your variables. From the computer’s perspective, we could call the variable almost anything (<code class="docutils literal notranslate"><span class="pre">potato</span></code>, <code class="docutils literal notranslate"><span class="pre">bananafish</span></code>, <code class="docutils literal notranslate"><span class="pre">flat_tire</span></code>). As long as we are consistent, the code will execute the same.</p>
+<p>You’ll also notice that this code cell, like most other code cells in this notebook, is commented in the first line to explain its purpose by using the # symbol, another good practice.</p>
+</div>
+<div class="section" id="variable-naming-rules">
+<h2>Variable Naming Rules<a class="headerlink" href="#variable-naming-rules" title="Permalink to this headline">¶</a></h2>
+<p>In addition to being descriptive, variable names must follow 3 basic rules:</p>
+<ol class="simple">
+<li><p>Must be one word (no spaces allowed)</p></li>
+<li><p>Only letters, numbers and the underscore character (_) are allowed</p></li>
+<li><p>Cannot begin with a number</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Which of these variable names are acceptable? </span>
+<span class="c1"># Comment out the variables that are not allowed in Python by adding a # in front of each line</span>
+<span class="c1"># Then, run this cell to check if the variable assignment works. </span>
+<span class="c1"># If you get an error, the variable name is not allowed in Python.</span>
+
+<span class="n">a</span> <span class="n">variable</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="mi">2</span><span class="n">variable</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">a_variable</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">VARIable</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Many different kinds of programs often need to do very similar operations. Instead of writing the same code over and over again, you can use a <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#function">function</a>. Essentially, a function is a small snippet of code that can be quickly referenced and reused.</p>
+<p>One of the most common functions used in Python is the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, which simply prints a string. Above, we used the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to print ‘Hello World!’; now, let’s use it to print whatever you would like. Replace the text inside of the quotation marks below with whatever words you would like to print.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A print function that prints whatever you tell it to</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your words here&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We could also define a variable with our chosen input string and then pass that variable into the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function. It is common for functions to take an input, called an <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#argument">argument</a>, that is placed inside the parentheses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a string and then print it</span>
+<span class="n">our_string</span> <span class="o">=</span> <span class="s1">&#39;Your words here&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">our_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, let’s try a slightly more complex example of defining a variable. Modify the cell below by:</p>
+<ol class="simple">
+<li><p>Deleting the text that says <font color='red'><strong>‘yourname’</strong></font> (but keep the quotation marks)</p></li>
+<li><p>Typing your name inside the quotation marks instead, and finally</p></li>
+<li><p>Running the code cell</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_hey</span><span class="p">(</span><span class="n">recipient</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;Hey, </span><span class="si">{}</span><span class="s1">!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recipient</span><span class="p">)</span>
+<span class="n">print_hey</span><span class="p">(</span><span class="s1">&#39;yourname&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python ‘out-of-the-box’ comes with many different useful functions, but for more specialized operations, you will likely need to import <strong>modules</strong> with additional functions. In our next notebook, we will import several functions that will allow us to perform a range of analyses with our datasets.</p>
+</div>
+</div>
+<div class="section" id="next-steps">
+<h1>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h1>
+<p>That’s the quick introduction to Jupyter and Python!  We’ve covered values, <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#expression">expressions</a>, <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#operator">operators</a>, <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#variable">variables</a>, <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#assignment-statement">assignment statements</a>, and <a class="reference external" href="https://docs.tdm-pilot.org/key-terms/#function">functions</a>.</p>
+<p>If you’d like to learn more Python, Constellate has published some great open Jupyter Notebook <a class="reference external" href="https://docs.constellate.org/">lessons</a> including beginner and intermediate Python. There are many additional resources online for learning Python, such as <a class="reference external" href="https://www.py4e.com/">Python for Everybody</a>.</p>
+<p>Next we’ll start working with our datasets, using some slightly more complicated commands. If you built your own dataset in Constellate, you’ll want to have the ID handy. It looks like the bit highlighted in yellow here:</p>
+<p><img alt="ConstellateDatasetID.png" src="attachment:ConstellateDatasetID.png" /></p>
+<p>We’ll begin the text analysis portion after a short break.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sarah Connell, Jen Ferguson, and Kate Kryder<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by/2.0/"><img class="license" alt="Creative Commons License" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /></a> The tutorials and workshop materials are licensed under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons BY License</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-125778965-3', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>
