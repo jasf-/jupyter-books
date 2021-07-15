@@ -1,4 +1,5 @@
 
+
 # Constellate Collaborative Notebooks and Lessons
 Constellate is a platform to learn and perform text analysis, build datasets, and share analytics course materials. Open the black box of text analysis with [Constellate](https://constellate.org/), from JSTOR and Portico. 
 
@@ -59,3 +60,5 @@ Created by [Nathan Kelber](http://nkelber.com) and [Ted Lawless](https://github.
 <br />
 
 ![CC BY License Logo](https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png)
+
+[![Binder](https://binder.constellate.org/badge_logo.svg)](https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master)
