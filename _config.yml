@@ -8,7 +8,7 @@
 title                       : Python and Text Analysis for Absolute Beginners  # The title of the book. Will be placed in the left navbar.
 author                      : Sarah Connell, Jen Ferguson, and Kate Kryder  # The author of the book
 copyright                   : "None"  # Copyright year to be placed in the footer
-logo                        : "book/img/NU_Library_redblack.png" #logo.png  "book/img/NU_NULab_Rg_CMYK-2048x347.jpg" logo.png # A path to the book logo
+logo                        : "book/img/NU_Library_redblack.png" #logo.png   # A path to the book logo
 exclude_patterns            : [Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 
 # Auto-exclude files not in the toc
