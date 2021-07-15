@@ -1,32 +1,34 @@
+<!-- #region -->
 # About
-Welcome to *Teaching Text Analysis with Constellate*, a course for Constellate Beta participants.   The site has three main purposes:
+Welcome to *Python and Text Analysis for Absolute Beginners*! 
+This site is a self-guided version of the [popular workshop of the same name](https://northeastern.libcal.com/event/7768630) run by [NULab for Texts, Maps, and Networks (CSSH)](https://web.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services)
 
-1. To help train teachers in text analysis
-2. To share computational text analysis lessons in an Open Educational Directory
-3. To serve as a template for your own teacher workshops and courses
+Description:
 
-If you are completely new to teaching text analysis, we recommend you join our free one-month courses taught by Dr. Nathan Kelber of JSTOR Labs. Find out more by [joining our email list](mailto:tdm@ithaka.org?Subject=Joining%20Constellate%20Community). 
+Pondering Python? Tantalized by text analysis? Wondering how Jupyter notebooks work? Read on!
+
+In this hands-on session, attendees will learn some basic Python while working in Jupyter notebooks, an interactive web tool for running and writing about code. Next, we'll use Python and Jupyter to run a simple text analysis on a custom dataset built with Constellate, a text mining platform for building and analyzing textual datasets from sources such as JSTOR, Portico, Chronicling America, and Reveal Digital. We will close by discussing opportunities to further expand attendees' coding and text analysis skills after the session.
+
+No prior experience with Python, JSTOR, or Jupyter is necessary, and no programming skills are needed or assumed for this session.
+
+
+This site includes 3 lessons:
+
+1. Creating datasets for text analysis in Constellate
+2. Intro to Jupyter Notebooks and Python
+3. Intro to Text Analysis
+
+
 
 ## Licensing
 
-All of the teaching materials on this site are licensed under a Creative Commons BY license. You are free to share and adapt the materials for your own teaching so long as credit is given to the creators, the material is labeled with a CC BY License, and indicate if changes were made.
+All of the teaching materials on this site are licensed under a Creative Commons BY license. You are free to share and adapt the materials for your own teaching so long as credit is given to the creators, the material is labeled with a CC BY License, and indicate if changes were made. Creator credit is noted within each of the three lessons.
+
 
 ![CC BY License Logo](https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png)
 
-## Open Educational Resources: Retain, Reuse, Revise, Remix, Redistribute
 
-This website has been written as a template ready for adoption by other teachers. [Create your own workshop or course from this template](./create-your-own.md). 
+## About this site
 
-|Five Rs of OER|Constellate feature|
-|---|---|
-|Retain| Teaching materials are available in a [public GitHub Repo](https://github.com/ithaka/tdm-notebooks). Users have the right to make copies and keep them.|
-|Reuse| All lessons can be re-used without need for changes.|
-|Revise| Lessons can be adjusted modified, and altered so long as credit is given to the original creators.|
-|Remix| Lessons can be combined with other materials to make new lessons.|
-|Redistribute| Users are free to redistribute materials in original, revised, and/or remixed form so long as credit is givent to the original creators.|
-
-## Citing the original creators
-
-This [site, lesson] is a [Reused, Revised, Remixed] version of
-[Teaching Text Analysis with Constellate](https://github.com/ithaka/tdm-notebooks), a [Jupyter Book](http://jupyterbook.org) **CC BY**, [Nathan Kelber](http://nkelber.com) and Ted Lawless for [Constellate](https://constellate.org).
-
+This site is a [Jupyter Book](http://jupyterbook.org) version of the [Python and Text Analysis for Absolute Beginners](https://northeastern.libcal.com/event/7768630) workshop run by the [NULab for Texts, Maps, and Networks (CSSH)](https://web.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services). This Jupyter Book was created by [Jen Ferguson](mailto:j.ferguson@northeastern.edu).
+<!-- #endregion -->
