@@ -5,17 +5,17 @@
 
 - part: Create a dataset in Constellate 
   chapters:
-  - file: book/AbouttheCorpus
-    title: About Constellate
   - file: book/placeholder-working-in-Constellate
     title: Placeholder - Working in Constellate
   - url: https://constellate.org/
     title: Constellate 
-  - 
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
- 
+  - file: book/AboutJupyter
+    title: About Jupyter 
+  - file: book/jasfeditedPyNb
+    title: Intro to Python 
   - file: book/old-add-my-lesson
     title: Holdover - Add your lesson or class
 
