@@ -6,11 +6,11 @@
 - part: Create a dataset in Constellate 
   chapters:
   - file: book/placeholder-working-in-Constellate
-    title: Working in Constellate
+    title: Placeholder - Working in Constellate
   - url: https://constellate.org/
     title: Constellate 
   - file: book/old-syllabus
-    title: Holdover Course Syllabus
+    title: Holdover - Course Syllabus
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
@@ -20,7 +20,7 @@
   - file: book/jasfeditedPyNb
     title: Intro to Python - Jen's Summer 2021 version
   - file: book/old-add-my-lesson
-    title: Holdover Add your lesson or class
+    title: Holdover - Add your lesson or class
 
 
 - part: Intro to Text Analysis - Finding Signficant Terms 
