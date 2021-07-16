@@ -5,18 +5,19 @@
 
 - part: Create a dataset in Constellate 
   chapters:
+  - file: book/AbouttheCorpus
+    title: About Constellate
   - file: book/placeholder-working-in-Constellate
     title: Placeholder - Working in Constellate
   - url: https://constellate.org/
     title: Constellate 
-  - file: book/old-syllabus
-    title: Holdover - Course Syllabus
+  - 
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
  
-  - file: book/AbouttheCorpusandAboutJupyter
-    title: About the Corpus and about Jupyter 
+  - file: book/AboutJupyter
+    title: About Jupyter 
   - file: book/jasfeditedPyNb
     title: Intro to Python - Jen's Summer 2021 version
   - file: book/old-add-my-lesson
@@ -25,16 +26,15 @@
 
 - part: Intro to Text Analysis - Finding Signficant Terms 
   chapters:
-  - file: book/all-notebooks
-    title: Open Notebook Lessons Directory
-  - file: book/more-classes
-    title: More teachers using this model
-  - file: book/add-my-lesson
-    title: Add your lesson or class
-  - url: https://constellate.org/docs/how-to-create-a-course-website
-    title: Create Course from this template
+  - file: book/old-all-notebooks
+    title: Holdover - Open Notebook Lessons Directory
+  - file: book/21MayCountandVisualize
+    title: Count and Visualize
+    subtitle: because I still need to pull in the actual SigTerms notebook
+ 
+ 
 
-- part: References & more information
+- part: Holdover - References & more information
   chapters:
     - url: https://constellate.org
       title: Constellate Platform
