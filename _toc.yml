@@ -28,11 +28,9 @@
   chapters:
   - file: book/old-all-notebooks
     title: Holdover - Open Notebook Lessons Directory
-  - file: book/21MayCountandVisualize
-    title: Placeholder - Count and Visualize 
  
 
-- part: References & more information
+- part: Holdover - References & more information
   chapters:
     - url: https://constellate.org
       title: Constellate Platform
