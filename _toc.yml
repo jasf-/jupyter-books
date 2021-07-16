@@ -14,10 +14,8 @@
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
-  - file: book/AboutJupyter
-    title: About Jupyter 
   - file: book/jasfeditedPyNb
-    title: Intro to Python 
+    title: Intro to Jupyter and Python 
   - file: book/old-add-my-lesson
     title: Holdover - Add your lesson or class
 
