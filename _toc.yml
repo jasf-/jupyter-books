@@ -5,6 +5,8 @@
 
 - part: Create a dataset in Constellate 
   chapters:
+  - file: book/AbouttheCorpus
+    title: About Constellate
   - file: book/placeholder-working-in-Constellate
     title: Placeholder - Working in Constellate
   - url: https://constellate.org/
