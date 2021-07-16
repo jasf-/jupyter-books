@@ -19,7 +19,7 @@
   - file: book/AboutJupyter
     title: About Jupyter 
   - file: book/jasfeditedPyNb
-    title: Intro to Python - Jen's Summer 2021 version
+    title: Intro to Python 
   - file: book/old-add-my-lesson
     title: Holdover - Add your lesson or class
 
@@ -28,6 +28,8 @@
   chapters:
   - file: book/old-all-notebooks
     title: Holdover - Open Notebook Lessons Directory
+  - file: book/21MayCountandVisualize
+    title: Placeholder - Count and Visualize 
  
 
 - part: Holdover - References & more information
