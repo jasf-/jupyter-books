@@ -23,7 +23,7 @@
   - url: https://constellate.org/docs/how-to-create-a-course-website
     title: Create Course from this template
 
-- part: Intro to Text Analysis: Finding Signficant Terms 
+- part: Intro to Text Analysis - Finding Signficant Terms 
   chapters:
   - file: book/all-notebooks
     title: Open Notebook Lessons Directory
