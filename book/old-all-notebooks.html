@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About &#8212; Python and Text Analysis for Absolute Beginners</title>
+    <title>Lesson Directory &#8212; Python and Text Analysis for Absolute Beginners</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="About Constellate.org" href="AbouttheCorpus.html" />
+    <link rel="next" title="Quantifying characteristics of documents in your dataset" href="21MayCountandVisualize.html" />
+    <link rel="prev" title="Add my lesson to the directory" href="old-add-my-lesson.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,8 +83,8 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    About
   </a>
  </li>
@@ -132,9 +133,9 @@
   Intro to Text Analysis - Finding Signficant Terms
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="old-all-notebooks.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Holdover - Open Notebook Lessons Directory
   </a>
  </li>
@@ -211,7 +212,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/book/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/book/old-all-notebooks.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -231,10 +232,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2Fbook/intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2Fbook/old-all-notebooks.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/book/intro.md"><button
+        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/book/old-all-notebooks.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -260,16 +261,31 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#licensing">
-   Licensing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#about-this-site">
-   About this site
+  <a class="reference internal nav-link" href="#python">
+   Python
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beginner-lessons">
+     Beginner Lessons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intermediate-lessons">
+     Intermediate Lessons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-research-notebooks">
+     Advanced Research Notebooks
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#r">
+   R
+  </a>
  </li>
 </ul>
 
@@ -282,38 +298,58 @@
         
               <div>
                 
-  <!-- #region -->
-<div class="section" id="about">
-<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to <em>Python and Text Analysis for Absolute Beginners</em>!
-This site is a self-guided version of the <a class="reference external" href="https://northeastern.libcal.com/event/7768630">popular workshop of the same name</a> run by <a class="reference external" href="https://web.northeastern.edu/nulab/">NULab for Texts, Maps, and Networks (CSSH)</a> and <a class="reference external" href="https://library.northeastern.edu/services/research-data-services">Research Data Services (Northeastern University Library)</a></p>
-<p>Description:</p>
-<p>Pondering Python? Tantalized by text analysis? Wondering how Jupyter notebooks work? Read on!</p>
-<p>In this hands-on session, attendees will learn some basic Python while working in Jupyter notebooks, an interactive web tool for running and writing about code. Next, we’ll use Python and Jupyter to run a simple text analysis on a custom dataset built with Constellate, a text mining platform for building and analyzing textual datasets from sources such as JSTOR, Portico, Chronicling America, and Reveal Digital. We will close by discussing opportunities to further expand attendees’ coding and text analysis skills after the session.</p>
-<p>No prior experience with Python, JSTOR, or Jupyter is necessary, and no programming skills are needed or assumed for this session.</p>
-<p>This site includes 3 lessons:</p>
-<ol class="simple">
-<li><p>Creating datasets for text analysis in Constellate</p></li>
-<li><p>Intro to Jupyter Notebooks and Python</p></li>
-<li><p>Intro to Text Analysis</p></li>
-</ol>
-<div class="section" id="licensing">
-<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
-<p>All of the teaching materials on this site are licensed under a Creative Commons BY license. You are free to share and adapt the materials for your own teaching so long as credit is given to the creators, the material is labeled with a CC BY License, and indicate if changes were made. Creator credit is noted within each of the three lessons.</p>
-<p><img alt="CC BY License Logo" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /></p>
+  <div class="section" id="lesson-directory">
+<h1>Lesson Directory<a class="headerlink" href="#lesson-directory" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="beginner-lessons">
+<h3>Beginner Lessons<a class="headerlink" href="#beginner-lessons" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../getting-started-with-jupyter.html"><span class="doc std std-doc">Getting Started with Jupyter Notebooks</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../python-basics-1.html"><span class="doc std std-doc">Python Basics 1</span></a> by Nathan Kelber</p></li>
+<li><p><span class="xref myst">Python Basics 2</span> by Nathan Kelber</p></li>
+<li><p><span class="xref myst">Python Basics 3</span> by Nathan Kelber</p></li>
+</ul>
 </div>
-<div class="section" id="about-this-site">
-<h2>About this site<a class="headerlink" href="#about-this-site" title="Permalink to this headline">¶</a></h2>
-<p>This site is a <a class="reference external" href="http://jupyterbook.org">Jupyter Book</a> version of the <a class="reference external" href="https://northeastern.libcal.com/event/7768630">Python and Text Analysis for Absolute Beginners</a> workshop run by the <a class="reference external" href="https://web.northeastern.edu/nulab/">NULab for Texts, Maps, and Networks (CSSH)</a> and <a class="reference external" href="https://library.northeastern.edu/services/research-data-services">Research Data Services (Northeastern University Library)</a>. This Jupyter Book was created by <a class="reference external" href="mailto:j&#46;ferguson&#37;&#52;&#48;northeastern&#46;edu">Jen Ferguson</a>.</p>
-<!-- #endregion -->
-<div class="toctree-wrapper compound">
+<div class="section" id="intermediate-lessons">
+<h3>Intermediate Lessons<a class="headerlink" href="#intermediate-lessons" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="xref myst">Exploring Metadata and Pre-Processing</span> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><span class="xref myst">Exploring Word Frequencies</span> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../finding-significant-terms.html"><span class="doc std std-doc">Finding Significant Words using TF/IDF</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../working-with-dataset-files.html"><span class="doc std std-doc">Working with Dataset Files</span></a> by Nathan Kelber</p></li>
+<li><p><span class="xref myst">Pandas 1</span> by Nathan Kelber</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/pandas.html">Data Analysis with Pandas</a> by Melanie Walsh</p></li>
+<li><p><a class="reference internal" href="../creating-stopwords-list.html"><span class="doc std std-doc">Creating a Stopwords List</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference internal" href="../counter-objects.html"><span class="doc std std-doc">Counter Objects</span></a> by Nathan Kelber</p></li>
+<li><p><span class="xref myst">Sentiment Analysis with VADER</span> by Nathan Kelber</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ocr.html">A Gentle Introduction to OCR</a> by Hannah Jacobs</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ancient-medieval.html">Intro to Machine Learning</a> by William Mattingly</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/machine-learning-grant.html">Intro to Machine Learning</a> by Grant Glass</p></li>
+</ul>
 </div>
-<div class="toctree-wrapper compound">
+<div class="section" id="advanced-research-notebooks">
+<h3>Advanced Research Notebooks<a class="headerlink" href="#advanced-research-notebooks" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="xref myst">LDA Topic Modeling</span> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/topic-models.html">How to Do Things with Topic Models</a> by Rafael Alvarado</p></li>
+<li><p><span class="xref myst">Tokenize Text Files</span> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><span class="xref myst">Tokenizing Text Files with NLTK</span> by Nathan Kelber</p></li>
+<li><p><span class="xref myst">Exploring Metadata and Pre-Processing (Research Version)</span> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><span class="xref myst">Exploring Word Frequencies (Research Version)</span> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../finding-significant-terms-for-research.html"><span class="doc std std-doc">Finding Significant Words using TF/IDF (Research Version)</span></a> by Nathan Kelber and Ted Lawless</p></li>
+<li><p><a class="reference internal" href="../creating-stopwords-list-for-research.html"><span class="doc std std-doc">Creating a Stopwords List (Research Version)</span></a> by Nathan Kelber</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ancient-medieval.html">Text Analysis in Ancient/Medieval Languages</a> by William Mattingly</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/ner.html">Named Entity Recognition</a> by Zoe LeBlanc</p></li>
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/visualizing-humanities-data.html">Visualizing Humanities Data</a> by Zoe LeBlanc</p></li>
+</ul>
 </div>
-<div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
-</div>
+<div class="section" id="r">
+<h2>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nkelber.github.io/tapi2021/book/courses/intro-to-r.html">Introduction to R Programming</a> by Jacalyn Hubandtest/tidytext?urlpath=rstudio) of RStudio running in our environment that was <a class="reference external" href="https://github.com/mdlincoln/bindertest">created by Matt Lincoln and David Brown</a> for a 2019 Text Mining Workshop at Carnegie Mellon University.</p></li>
+</ul>
 </div>
 </div>
 
@@ -342,7 +378,8 @@ This site is a self-guided version of the <a class="reference external" href="ht
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="AbouttheCorpus.html" title="next page">About Constellate.org</a>
+    <a class='left-prev' id="prev-link" href="old-add-my-lesson.html" title="previous page">Add my lesson to the directory</a>
+    <a class='right-next' id="next-link" href="21MayCountandVisualize.html" title="next page">Quantifying characteristics of documents in your dataset</a>
 
         </div>
         
