@@ -10,7 +10,7 @@
   - file: book/placeholder-working-in-Constellate
     title: Placeholder - Working in Constellate
   - url: https://constellate.org/docs/user-quick-start
-    title: Create a dataset in Constellate: Quickstart guide 
+    title: Create a dataset in Constellate - Quickstart guide 
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
