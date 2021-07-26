@@ -9,8 +9,8 @@
     title: About Constellate
   - file: book/placeholder-working-in-Constellate
     title: Placeholder - Working in Constellate
-  - url: https://constellate.org/
-    title: Constellate 
+  - url: https://constellate.org/docs/user-quick-start
+    title: Create a dataset in Constellate: Quickstart guide 
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
@@ -22,10 +22,8 @@
 
 - part: Intro to Text Analysis - Finding Signficant Terms 
   chapters:
-  - file: book/old-all-notebooks
-    title: Holdover - Open Notebook Lessons Directory
-  - file: book/21MayCountandVisualize
-    title: Placeholder - Count and Visualize 
+  - file: book/2021SignificantTerms
+    title: Finding Signifcant Terms
  
 
 - part: Holdover - References & more information
@@ -36,6 +34,8 @@
       title: Constellate Documentation
     - url: https://constellate.org/docs/key-terms
       title: Text Analysis Glossary
+    - file: book/old-all-notebooks
+      title: Holdover - Open Notebook Lessons Directory
     - url: https://jupyterbook.org/intro.html
       title: Jupyter Book Documentation
     - file: book/keep-learning
