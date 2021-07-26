@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding significant words within a curated dataset &#8212; Python and Text Analysis for Absolute Beginners</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson Directory" href="old-all-notebooks.html" />
+    <link rel="prev" title="Add my lesson to the directory" href="old-add-my-lesson.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/CombinedLogosJupyterBook.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python and Text Analysis for Absolute Beginners</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   About
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Create a dataset in Constellate
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="AbouttheCorpus.html">
+   About Constellate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs/user-quick-start">
+   Create a dataset in Constellate - Quickstart guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Intro to Python in Jupyter Notebooks
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jasfeditedPyNb.html">
+   About Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="old-add-my-lesson.html">
+   Holdover - Add your lesson or class
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Intro to Text Analysis - Finding Signficant Terms
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Finding Signifcant Terms
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Holdover - References &amp; more information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org">
+   Constellate Platform
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs">
+   Constellate Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs/key-terms">
+   Text Analysis Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="old-all-notebooks.html">
+   Holdover - Open Notebook Lessons Directory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://jupyterbook.org/intro.html">
+   Jupyter Book Documentation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/book/2021SignificantTerms.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jasf-/py-tdm-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2Fbook/2021SignificantTerms.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/book/2021SignificantTerms.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/book/2021SignificantTerms.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" class="align-left" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /><br /></p>
+<p>Adapted by <a class="reference external" href="https://library.northeastern.edu/about/library-staff-directory/jen-ferguson">Jen Ferguson</a> from notebooks created by <a class="reference external" href="http://nkelber.com">Nathan Kelber</a> and Ted Lawless for <a class="reference external" href="https://labs.jstor.org/">JSTOR Labs</a> under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC BY License</a>; lightly modified by <a class="reference external" href="https://cssh.northeastern.edu/person/sarah-connell/">Sarah Connell</a> in summer 2021. See <a class="reference external" href="https://ithaka.github.io/tdm-notebooks/book/all-notebooks.html">here</a> for the originals and additional text analysis notebooks.</p>
+<div class="section" id="finding-significant-words-within-a-curated-dataset">
+<h1>Finding significant words within a curated dataset<a class="headerlink" href="#finding-significant-words-within-a-curated-dataset" title="Permalink to this headline">¶</a></h1>
+<p>This notebook demonstrates how to find the significant words in your dataset using a model called TF-IDF, which stands for term frequency-inverse document frequency. TF-IDF encompasses both ‘aboutness’ and ‘uniqueness’ by looking at how often a term appears in a document (=‘aboutness’) and how unusual it is for that same term to appear in other documents in your dataset (=‘uniqueness’).</p>
+<p>Essentially, TF-IDF attempts to determine which words are distinctive in individual documents, relative to a larger corpus. The idea is that words that are common within a particular document and <em>uncommon</em> within the other documents you’re comparing it to can tell you something significant about the language in a document.</p>
+<p><em>Fun fact: TF-IDF was used in early search engines to do relevance ranking, until clever folks figured out how to break that by ‘keyword stuffing’ their websites.</em></p>
+<p>As you work through this notebook, you’ll take the following steps:</p>
+<ul class="simple">
+<li><p>Import a dataset</p></li>
+<li><p>Find the query used to build the dataset within the dataset’s metadata</p></li>
+<li><p>Write a helper function to help clean up a single token</p></li>
+<li><p>Clean each document of your dataset, one token at a time</p></li>
+<li><p>Compute the most significant words in your corpus using TF-IDF and a library called <code class="docutils literal notranslate"><span class="pre">gensim</span></code></p></li>
+</ul>
+<p>To perform this analysis, we’ll need to treat the words in our dataset as <em>tokens</em>. <strong>What’s a token?</strong>  It’s a string of text. For our purposes, think of a token as a single word. Calculating tokens and counting words can get very complicated (for example, is “you’re” one word or two? what about “part-time”?), but we’ll keep things simple for this lesson and treat “tokens” as strings of text separated by white space.</p>
+<p>First we’ll import <code class="docutils literal notranslate"><span class="pre">gensim</span></code>, and the <code class="docutils literal notranslate"><span class="pre">tdm_client</span></code> library.  The <code class="docutils literal notranslate"><span class="pre">tdm_client</span></code> library contains functions for connecting to the JSTOR server that contains our corpus dataset. As a reminder, <em>functions</em> are pieces of code that perform specific tasks, and we can get additional functions by installing libraries like <code class="docutils literal notranslate"><span class="pre">gensim</span></code> and <code class="docutils literal notranslate"><span class="pre">tdm_client</span></code>. We’ll also import a library that will suppress unnecessary warnings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">gensim</span>
+
+<span class="kn">import</span> <span class="nn">tdm_client</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we’ll pull in our datasets.</p>
+<p><strong>Did you build your own dataset?</strong>  In the next code cell, you’ll supply the dataset ID provided when you created your dataset. Now’s a good time to make sure you have it handy.</p>
+<p><strong>Didn’t create a dataset?</strong>  Here are a couple to choose from, with dataset IDs in <font color=red> red </font>:</p>
+<ul class="simple">
+<li><p>Documents published in African American Review, Black American Literature Forum, and Negro American Literature Forum (from JSTOR): <font color=red>b4668c50-a970-c4d7-eb2c-bb6d04313542 </font></p></li>
+<li><p>‘Civilian Conservation Corps’ from Chronicling America: <font color=red>9fa82dbc-9269-6deb-9720-179b4ba5e451</font></p></li>
+<li><p>‘children’ from Documenting the American South: <font color=red>c002acf3-6d4a-c4c8-7c7c-a173dfdaec39</font></p></li>
+</ul>
+<p>A sample <strong>dataset ID</strong> of data derived from searching JSTOR for ‘Civilian Conservation Corps’ <font color=red>(‘e2a07be0-39f4-4b9f-b3d1-680bb04dc580’)</font> is provided in the code cell below.</p>
+<p>Pasting your unique <strong>dataset ID</strong> in place of the <font color=red> red </font> text below will import your dataset from the JSTOR server. (No output will show.) To frame this in terms of our introduction to Python, running the line of code below will create a new variable called <code class="docutils literal notranslate"><span class="pre">dataset_id</span></code> whose value is the ID for the dataset you’ve chosen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initializes the &quot;dataset_id&quot; variable</span>
+<span class="n">dataset_id</span> <span class="o">=</span> <span class="s1">&#39;e2a07be0-39f4-4b9f-b3d1-680bb04dc580&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we want to create one more variable for storing information about our dataset, using a function from <code class="docutils literal notranslate"><span class="pre">tdm_client</span></code> called <code class="docutils literal notranslate"><span class="pre">get_description()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initializes the &quot;dataset_info&quot; variable</span>
+<span class="n">dataset_info</span> <span class="o">=</span> <span class="n">tdm_client</span><span class="o">.</span><span class="n">get_description</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s double-check to make sure we have the correct dataset.
+We can confirm the original query by viewing the <code class="docutils literal notranslate"><span class="pre">search_description</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_info</span><span class="p">[</span><span class="s2">&quot;search_description&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using our new variable, we can also find the total number of documents in the dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_info</span><span class="p">[</span><span class="s2">&quot;num_documents&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ve verified that we have the correct dataset, and we’ve checked how many documents are in there. So, now let’s pull the dataset into our working environent. This code might take a minute or two to run; recall that if it’s in process, you’ll see this: In [ * ].</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_file</span> <span class="o">=</span> <span class="n">tdm_client</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, let’s create a helper function that can standardize and clean up the tokens in our dataset. The function will:</p>
+<ul class="simple">
+<li><p>Change all tokens (aka words) to lower case.  This will make ‘otter’ and ‘Otter’ be counted as the same token.</p></li>
+<li><p>Discard tokens with non-alphabetical characters</p></li>
+<li><p>Discard any tokens less than 4 characters in length</p></li>
+</ul>
+<p><em>Question to ponder:</em> Why do you think we want to discard tokens that are less than 4 characters long?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_token</span><span class="p">(</span><span class="n">token</span><span class="p">):</span> <span class="c1"># Defines a function `process_token` that takes the argument `token`</span>
+    <span class="n">token</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># Changes all strings to lower case</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span> <span class="c1"># Discards any tokens that are less than 4 characters long</span>
+        <span class="k">return</span>
+    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()):</span> <span class="c1"># Discards any tokens with non-alphabetic characters</span>
+        <span class="k">return</span>
+    <span class="k">return</span> <span class="n">token</span> <span class="c1"># Returns the `token` variable which has been set equal to the `corrected` variable</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s cycle through each document in the corpus with our helper function.  This may take a while to run. After we run the code below, we will have a list called <code class="docutils literal notranslate"><span class="pre">documents</span></code> which will contain the cleaned tokens for every text in our corpus. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function at the end isn’t necessary to create this list of documents and their tokens, but it gives us some output to confirm when the code has been run.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a bit of setup that establishes how the documents will be read in</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">tdm_client</span><span class="o">.</span><span class="n">dataset_reader</span><span class="p">(</span><span class="n">dataset_file</span><span class="p">)</span>
+
+<span class="c1"># Creates a new variable called `documents` that is a list that that will contain all of our documents.</span>
+<span class="n">documents</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># This is the code that will actually read through your documents and apply the cleaning routines</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">document</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">reader</span><span class="p">):</span>
+    <span class="n">this_doc</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">_id</span> <span class="o">=</span> <span class="n">document</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">token</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">document</span><span class="p">[</span><span class="s2">&quot;unigramCount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">clean_token</span> <span class="o">=</span> <span class="n">process_token</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">clean_token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">this_doc</span> <span class="o">+=</span> <span class="p">[</span><span class="n">clean_token</span><span class="p">]</span> <span class="o">*</span> <span class="n">count</span>
+    <span class="n">documents</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">_id</span><span class="p">,</span> <span class="n">this_doc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document tokens collected and processed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get a sense of what we’ve just created, you can run the line of code below. It will show the tokens that have been collected for the first text in <code class="docutils literal notranslate"><span class="pre">documents</span></code> (Python starts counting at zero). If you want to see the tokens from a different document, you can change the number in the brackets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">documents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next few lines will set us up for TF-IDF analysis. First, let’s create a <em>gensim dictionary</em>; this is a masterlist of all the tokens across all the documents in our corpus, in which each token gets a unique identifier. This doesn’t have information on word frequencies yet; it’s essentially a catalog listing the unique tokens in our corpus and giving each its own identifier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dictionary</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next step is to connect the word frequency data found within <code class="docutils literal notranslate"><span class="pre">documents</span></code> to the unique identifiers from our gensim dictionary. To do this, we’ll create a <em>bag of words</em> corpus: this is a list that contains information on both word frequency and unique identifiers for the tokens in our corpus.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bow_corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next step is to create the gensim TF-IDF model, which will control how TF-IDF is calculated:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">TfidfModel</span><span class="p">(</span><span class="n">bow_corpus</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we’ll apply our model to the <code class="docutils literal notranslate"><span class="pre">bow_corpus</span></code> to create our results in <code class="docutils literal notranslate"><span class="pre">corpus_tfidf</span></code>, which is a list of each document in our dataset, along with the TF-IDF scores for the tokens in the document.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corpus_tfidf</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="n">bow_corpus</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have those pieces in place, we can run the following code cells to find the most distinctive terms, by TF-IDF, in our dataset. These are terms that appear in a particular text, but rarely or never appear in other texts.  First, we’ll need to set up a dictionary with our documents and then we’ll need to sort the items in our new dictionary. We won’t get any output from this code; it will just set things up. This will also take some time to run.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">td</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">_id</span><span class="p">):</span> <span class="n">value</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus_tfidf</span>
+        <span class="k">for</span> <span class="n">_id</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">doc</span>
+    <span class="p">}</span>
+<span class="n">sorted_td</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">td</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">kv</span><span class="p">:</span> <span class="n">kv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s see what we got! The code below will print out the top 20 most distinctive terms in the entire corpus, with their TF-IDF scores. If you want to see more terms, you can change the number in the square brackets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">term</span><span class="p">,</span> <span class="n">weight</span> <span class="ow">in</span> <span class="n">sorted_td</span><span class="p">[:</span><span class="mi">20</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It can also be useful to look at individual documents. This code will print the most significant word, by TF-IDF, for the first 20 documents in the corpus. Do you see any interesting or surprising results?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">doc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">corpus_tfidf</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">word_id</span><span class="p">,</span> <span class="n">score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">documents</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word_id</span><span class="p">),</span> <span class="n">score</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Want to keep going? Head back to Home and try the ‘Count and Visualize’ notebook, which will let you count and visualize some characteristics of the documents in your dataset. There are also many additional text analysis and Python notebooks at <a class="reference external" href="https://docs.constellate.org/">Constellate.org</a>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="old-add-my-lesson.html" title="previous page">Add my lesson to the directory</a>
+    <a class='right-next' id="next-link" href="old-all-notebooks.html" title="next page">Lesson Directory</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sarah Connell, Jen Ferguson, and Kate Kryder<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by/2.0/"><img class="license" alt="Creative Commons License" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /></a> The tutorials and workshop materials are licensed under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons BY License</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-125778965-3', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>
