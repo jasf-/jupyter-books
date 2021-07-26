@@ -7,8 +7,6 @@
   chapters:
   - file: book/AbouttheCorpus
     title: About Constellate
-  - file: book/placeholder-working-in-Constellate
-    title: Placeholder - Working in Constellate
   - url: https://constellate.org/docs/user-quick-start
     title: Create a dataset in Constellate - Quickstart guide 
 
