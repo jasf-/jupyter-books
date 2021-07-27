@@ -7,50 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creating a Stopwords List &#8212; Python and Text Analysis for Absolute Beginners</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -67,22 +67,22 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="_static/CombinedLogosJupyterBook.png" class="logo" alt="logo">
+      <img src="../_static/CombinedLogosJupyterBook.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Python and Text Analysis for Absolute Beginners</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="book/intro.html">
+  <a class="reference internal" href="../book/intro.html">
    About
   </a>
  </li>
@@ -94,7 +94,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="book/AbouttheCorpus.html">
+  <a class="reference internal" href="../book/AbouttheCorpus.html">
    About Constellate
   </a>
  </li>
@@ -106,12 +106,29 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Intro to Python in Jupyter Notebooks
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book/Getting%20Started%20with%20Jupyter%20Notebooks.html">
+   Welcome to your first Jupyter notebook!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book/Getting%20Started%20with%20Python.html">
+   What is Python?
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Intro to Text Analysis - Finding Signficant Terms
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="book/2021SignificantTerms.html">
+  <a class="reference internal" href="../book/2021SignificantTerms.html">
    Finding Signifcant Terms
   </a>
  </li>
@@ -138,7 +155,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="book/old-all-notebooks.html">
+  <a class="reference internal" href="../book/old-all-notebooks.html">
    Holdover - Open Notebook Lessons Directory
   </a>
  </li>
@@ -188,7 +205,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/creating-stopwords-list-for-research.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/not currently used/creating-stopwords-list.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -208,10 +225,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2Fcreating-stopwords-list-for-research.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2Fnot currently used/creating-stopwords-list.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/creating-stopwords-list-for-research.ipynb"><button
+        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/not currently used/creating-stopwords-list.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -231,10 +248,10 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/creating-stopwords-list-for-research.ipynb"><button type="button"
+        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/not currently used/creating-stopwords-list.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
+                    src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
@@ -254,24 +271,23 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-basic-stopwords-list">
-   Create a Basic Stopwords List
+  <a class="reference internal nav-link" href="#the-purpose-of-a-stopwords-list">
+   The Purpose of a Stopwords List
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#output-stop-words-to-csv-file">
-   Output
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     stop_words
-    </span>
-   </code>
-   to CSV File
+  <a class="reference internal nav-link" href="#examining-the-nltk-stopwords-list">
+   Examining the NLTK Stopwords List
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#to-read-in-the-stopwords-csv">
-   To Read in the Stopwords CSV
+  <a class="reference internal nav-link" href="#storing-stopwords-in-a-csv-file">
+   Storing Stopwords in a CSV File
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-in-a-stopwords-csv">
+   Reading in a Stopwords CSV
   </a>
  </li>
 </ul>
@@ -292,17 +308,17 @@ For questions/comments/improvements, email <a class="reference external" href="m
 <div class="section" id="creating-a-stopwords-list">
 <h1>Creating a Stopwords List<a class="headerlink" href="#creating-a-stopwords-list" title="Permalink to this headline">¶</a></h1>
 <p><strong>Description:</strong>
-This notebook creates a stopwords list and exports it into a CSV file. The following processes are described:</p>
+This <a class="reference external" href="https://docs.constellate.org/key-terms/#jupyter-notebook">notebook</a> explains what a stopwords list is and how to create one. The following processes are described:</p>
 <ul class="simple">
 <li><p>Loading the NLTK stopwords list</p></li>
 <li><p>Modifying the stopwords list in Python</p></li>
 <li><p>Saving a stopwords list to a .csv file</p></li>
 <li><p>Loading a stopwords list from a .csv file</p></li>
 </ul>
-<p><strong>Use Case:</strong> For Researchers (Mostly code without explanation, not ideal for learners)</p>
-<p><a class="reference internal" href="creating-stopwords-list.html"><span class="doc std std-doc">Take me to the <strong>Learning Version</strong> of this notebook -&gt;</span></a></p>
+<p><strong>Use Case:</strong> For Learners (Detailed explanation, not ideal for researchers)</p>
+<p><a class="reference internal" href="creating-stopwords-list-for-research.html"><span class="doc std std-doc">Take me to <strong>Research Version</strong> of this notebook -&gt;</span></a></p>
 <p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Completion time:</strong> 5 minutes</p>
+<p><strong>Completion time:</strong> 20 minutes</p>
 <p><strong>Knowledge Required:</strong></p>
 <ul class="simple">
 <li><p>Python Basics Series (<a class="reference internal" href="python-basics-1.html"><span class="doc std std-doc">Start Python Basics I</span></a>)</p></li>
@@ -316,46 +332,95 @@ This notebook creates a stopwords list and exports it into a CSV file. The follo
 </ul>
 <p><strong>Research Pipeline:</strong> None</p>
 <hr class="docutils" />
-<div class="section" id="create-a-basic-stopwords-list">
-<h2>Create a Basic Stopwords List<a class="headerlink" href="#create-a-basic-stopwords-list" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-purpose-of-a-stopwords-list">
+<h2>The Purpose of a Stopwords List<a class="headerlink" href="#the-purpose-of-a-stopwords-list" title="Permalink to this headline">¶</a></h2>
+<p>Many text analytics techniques are based on counting the occurrence of words in a given text or set of texts (called a corpus). The most frequent words can reveal general textual patterns, but the most frequent words for any given text in English tend to look very similar to this:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Word</p></th>
+<th class="head"><p>Frequency</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>the</p></td>
+<td><p>1,160,276</p></td>
+</tr>
+<tr class="row-odd"><td><p>of</p></td>
+<td><p>906,898</p></td>
+</tr>
+<tr class="row-even"><td><p>and</p></td>
+<td><p>682,419</p></td>
+</tr>
+<tr class="row-odd"><td><p>in</p></td>
+<td><p>461,328</p></td>
+</tr>
+<tr class="row-even"><td><p>to</p></td>
+<td><p>418,017</p></td>
+</tr>
+<tr class="row-odd"><td><p>a</p></td>
+<td><p>334,082</p></td>
+</tr>
+<tr class="row-even"><td><p>is</p></td>
+<td><p>214,663</p></td>
+</tr>
+<tr class="row-odd"><td><p>that</p></td>
+<td><p>204,277</p></td>
+</tr>
+<tr class="row-even"><td><p>by</p></td>
+<td><p>181,605</p></td>
+</tr>
+<tr class="row-odd"><td><p>as</p></td>
+<td><p>177,774</p></td>
+</tr>
+</tbody>
+</table>
+<p>There are many <a class="reference external" href="https://docs.constellate.org/key-terms/#function-words">function words</a>, words like “the”, “in”, and “of” that are grammatically important but do not carry as much semantic meaning in comparison to <a class="reference external" href="https://docs.constellate.org/key-terms/#content-words">content words</a>, such as nouns and verbs.</p>
+<p>For this reason, many analysts remove common <a class="reference external" href="https://docs.constellate.org/key-terms/#function-words">function words</a> using a <a class="reference external" href="https://docs.constellate.org/key-terms/#stop-words">stopwords</a> list. There are many sources for stopwords lists. (We’ll use the Natural Language Toolkit stopwords list in this lesson.) <strong>There is no official, standardized stopwords list for text analysis.</strong></p>
+<p>An effective stopwords list depends on:</p>
+<ul class="simple">
+<li><p>the texts being analyzed</p></li>
+<li><p>the purpose of the analysis</p></li>
+</ul>
+<p>Even if we remove all common function words, there are often formulaic repetitions in texts that may be counter-productive for the research goal.<strong>The researcher is responsible for making educated decisions about whether or not to include any particular stopword given the research context.</strong></p>
+<p>Here are a few examples where additional stopwords may be necessary:</p>
+<ul class="simple">
+<li><p>A corpus of law books is likely to have formulaic, archaic repetition, such as, “hereunto this law is enacted…”</p></li>
+<li><p>A corpus of dramatic plays is likely to have speech markers for each line, leading to an over-representation of character names (Hamlet, Gertrude, Laertes, etc.)</p></li>
+<li><p>A corpus of emails is likely to have header language (to, from, cc, bcc), technical language (attached, copied, thread, chain) and salutations (attached, best, dear, cheers, etc.)</p></li>
+</ul>
+<p>Because every research project may require unique stopwords, it is important for researchers to learn to create and modify stopwords lists.</p>
+</div>
+<div class="section" id="examining-the-nltk-stopwords-list">
+<h2>Examining the NLTK Stopwords List<a class="headerlink" href="#examining-the-nltk-stopwords-list" title="Permalink to this headline">¶</a></h2>
+<p>The Natural Language Toolkit Stopwords list is well-known and a natural starting point for creating your own list. Let’s take a look at what it contains before learning to make our own modifications.</p>
+<p>We will store our stopwords in a Python list variable called <code class="docutils literal notranslate"><span class="pre">stop_words</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start from NLTK</span>
-<span class="kn">import</span> <span class="nn">nltk</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a stop_words list from the NLTK. We could also use the set of stopwords from Spacy or Gensim.</span>
 <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span> <span class="c1"># Import stopwords from nltk.corpus</span>
 <span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span> <span class="c1"># Create a list `stop_words` that contains the English stop words list</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>If you’re curious what is in our stopwords list, we can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> or <code class="docutils literal notranslate"><span class="pre">list()</span></code> functions to find out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start from Gensim. Creates a list from a frozen set. </span>
-<span class="kn">import</span> <span class="nn">gensim</span>
-<span class="kn">from</span> <span class="nn">gensim.parsing.preprocessing</span> <span class="kn">import</span> <span class="n">STOPWORDS</span>
-
-<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">STOPWORDS</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start from spaCy. </span>
-<span class="kn">import</span> <span class="nn">spacy</span>
-<span class="n">sp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;en_core_web_sm&#39;</span><span class="p">)</span>
-
-<span class="n">stop_words</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Defaults</span><span class="o">.</span><span class="n">stop_words</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">stop_words</span><span class="p">)</span> <span class="c1"># Show each string in our stopwords list</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="output-stop-words-to-csv-file">
-<h2>Output <code class="docutils literal notranslate"><span class="pre">stop_words</span></code> to CSV File<a class="headerlink" href="#output-stop-words-to-csv-file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="storing-stopwords-in-a-csv-file">
+<h2>Storing Stopwords in a CSV File<a class="headerlink" href="#storing-stopwords-in-a-csv-file" title="Permalink to this headline">¶</a></h2>
+<p>Storing the stopwords list in a variable like <code class="docutils literal notranslate"><span class="pre">stop_words</span></code> is useful for analysis, but we will likely want to keep the list even after the session is over for future changes and analyses. We can store our stop words list in a CSV file. A CSV, or “Comma-Separated Values” file, is a plain-text file with commas separating each entry. The file can be opened and modified with a text editor or spreadsheet software such as Excel or Google Sheets.</p>
+<p>Here’s what our NLTK stopwords list will look like as a CSV file opened in a plain text editor.</p>
+<p><img alt="The csv file as an image" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/stopwordsCSV.png" /></p>
+<p>Let’s create an example CSV using the <code class="docutils literal notranslate"><span class="pre">csv</span></code> module.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output stop_words to a CSV file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a CSV file to store a set of stopwords</span>
 
 <span class="kn">import</span> <span class="nn">csv</span> <span class="c1"># Import the csv module to work with csv files</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/stop_words.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -365,19 +430,36 @@ This notebook creates a stopwords list and exports it into a CSV file. The follo
 </div>
 </div>
 </div>
+<p>We have created a new file called data/stop_words.csv that you can open and modify using a basic text editor. Go ahead and make a change to your data/stop_words.csv (either adding or subtracting words) using a text editor. Remember, there are no spaces between words in the CSV file. If you want to edit the CSV right inside Jupyter Lab, right-click on the file and select “Open With &gt; Editor.”</p>
+<p><img alt="Selecting &quot;Open With &gt; Editor&quot; in Jupyter Lab" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/editCSV.png" /></p>
+<p>Now go ahead and add in a new word. Remember a few things:</p>
+<ul class="simple">
+<li><p>Each word is separated from the next word by a comma.</p></li>
+<li><p>There are no spaces between the words.</p></li>
+<li><p>You must save changes to the file if you’re using a text editor, Excel, or the Jupyter Lab editor.</p></li>
+<li><p>You can reopen the file to make sure your changes were saved.</p></li>
+</ul>
+<p>Now let’s read our CSV file back and overwrite our original <code class="docutils literal notranslate"><span class="pre">stop_words</span></code> list variable.</p>
 </div>
-<div class="section" id="to-read-in-the-stopwords-csv">
-<h2>To Read in the Stopwords CSV<a class="headerlink" href="#to-read-in-the-stopwords-csv" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="reading-in-a-stopwords-csv">
+<h2>Reading in a Stopwords CSV<a class="headerlink" href="#reading-in-a-stopwords-csv" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open the CSV file and list the contents</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/stop_words.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">stop_words</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">stop_words</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Refining a stopwords list for your analysis can take time. It depends on:</p>
+<ul class="simple">
+<li><p>What you are hoping to discover (for example, are function words important?)</p></li>
+<li><p>The material you are analyzing (for example, journal articles may repeat words like “abstract”)</p></li>
+</ul>
+<p>If your results are not satisfactory, you can always come back and adjust the stopwords. You may need to run your analysis many times to refine a good stopword list.</p>
 </div>
 </div>
 
@@ -394,7 +476,7 @@ This notebook creates a stopwords list and exports it into a CSV file. The follo
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./not currently used"
         },
         predefinedOutput: true
     }
@@ -432,7 +514,7 @@ This notebook creates a stopwords list and exports it into a CSV file. The follo
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
