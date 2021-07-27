@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is Python? &#8212; Python and Text Analysis for Absolute Beginners</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/CombinedLogosJupyterBook.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python and Text Analysis for Absolute Beginners</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/intro.html">
+   About
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Create a dataset in Constellate
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/AbouttheCorpus.html">
+   About Constellate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs/user-quick-start">
+   Create a dataset in Constellate - Quickstart guide
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Intro to Text Analysis - Finding Signficant Terms
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/2021SignificantTerms.html">
+   Finding Signifcant Terms
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Holdover - References &amp; more information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org">
+   Constellate Platform
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs">
+   Constellate Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs/key-terms">
+   Text Analysis Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="book/old-all-notebooks.html">
+   Holdover - Open Notebook Lessons Directory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://jupyterbook.org/intro.html">
+   Jupyter Book Documentation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Getting Started with Python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jasf-/py-tdm-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jasf-/py-tdm-book/issues/new?title=Issue%20on%20page%20%2FGetting Started with Python.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/jasf-/py-tdm-book/edit/master/https://github.com/jasf-/py-tdm-book/tree/master/book/Getting Started with Python.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://binder.constellate.org/v2/gh/jasf-/py-tdm-book/master?urlpath=tree/https://github.com/jasf-/py-tdm-book/tree/master/book/Getting Started with Python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   What is Python?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-does-python-code-look-like">
+   What does Python code look like?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-i-do-with-python">
+   What can I do with Python?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-operations">
+     1. Basic operations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-variables">
+     2. Save Variables
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#built-in-functions">
+     3. Built-in Functions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-functions">
+     4. Custom Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-types-of-data-can-python-use">
+   What types of data can Python use?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-python-work-with-text">
+   How does Python work with text?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-complete">
+   Lesson complete!
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" class="align-left" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /><br/></p>
+<p>Adapted from two notebooks created by <a class="reference external" href="http://nkelber.com">Nathan Kelber</a> and Ted Lawless for <a class="reference external" href="https://labs.jstor.org/">JSTOR Labs</a> under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC BY License</a>.<br/> See <a class="reference external" href="https://docs.tdm-pilot.org/tag/beginner-lessons/">here</a> for the original versions. Some content was also adapted from notebooks created by <a class="reference external" href="https://library.northeastern.edu/about/library-staff-directory/sarah-connell">Sarah Connell</a> and <a class="reference external" href="https://library.northeastern.edu/about/library-staff-directory/jen-ferguson">Jen Ferguson</a> for earlier versions of this workshop.<br /></p>
+<hr class="docutils" />
+<div class="section" id="what-is-python">
+<h1>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">¶</a></h1>
+<p>Python is a programming language that allows us to write instructions for a computer. We call these instructions “code.”</p>
+<p>Behind the scenes of our computers, there are millions of lines of code written in many different programming languages that make it possible for us to use them. For example, if you want to delete a file called “untitled.txt” on your computer, you probably drag-and-drop that file into your desktop trashcan. When this happens, behind the scenes, a programming language like Python runs a piece of code like this:</p>
+<blockquote>
+<div><p>os.remove(“untitled.txt”)</p>
+</div></blockquote>
+<p>Today, we will be writing instructions in Python for the virtual computer inside this Jupyter Notebook.</p>
+</div>
+<div class="section" id="what-does-python-code-look-like">
+<h1>What does Python code look like?<a class="headerlink" href="#what-does-python-code-look-like" title="Permalink to this headline">¶</a></h1>
+<p>Python code has two parts:</p>
+<ol class="simple">
+<li><p>Comments</p></li>
+<li><p>Code</p></li>
+</ol>
+<p>Take a look at the example below. The <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol denotes a comment, which contains explanatory notes for us as the reader. The <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code> is the actual code and contains the instructions for the computer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is a comment</span>
+<span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Learning to write Python is a bit like learning to write a foreign language. In the beginning, you will probably make some mistakes while writing your code that will make it impossible for the computer to understand.</p>
+<p>Helpfully, if you make a mistake, Python will output an error message to try to help you find the problem. Try running the code below to produce an error:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="what-can-i-do-with-python">
+<h1>What can I do with Python?<a class="headerlink" href="#what-can-i-do-with-python" title="Permalink to this headline">¶</a></h1>
+<p>Python can do four main things:</p>
+<ol class="simple">
+<li><p>Basic operations (such as calculator math)</p></li>
+<li><p>Save variables</p></li>
+<li><p>Built-in functions</p></li>
+<li><p>Custom functions</p></li>
+</ol>
+<div class="section" id="basic-operations">
+<h2>1. Basic operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h2>
+<p>The simplest thing you can do in Python is use basic operators (such as <code class="docutils literal notranslate"><span class="pre">+</span></code>,<code class="docutils literal notranslate"><span class="pre">-</span></code>,<code class="docutils literal notranslate"><span class="pre">*</span></code>, or <code class="docutils literal notranslate"><span class="pre">/</span></code>) to do calculator math. As an example, try running the code below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You should see an an output appear with the answer. This whole <code class="docutils literal notranslate"><span class="pre">1+1</span></code> line of code is called an <a class="reference external" href="https://constellate.org/docs/key-terms/#expression">expression</a>, the <code class="docutils literal notranslate"><span class="pre">+</span></code> is called an <a class="reference external" href="https://constellate.org/docs/key-terms/#operator">operator</a>, and the numbers are called values.</p>
+<blockquote>
+<div><p>Note: Spaces do not matter here. You can write <code class="docutils literal notranslate"><span class="pre">1+1</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code>, or even <code class="docutils literal notranslate"><span class="pre">1+</span> <span class="pre">1</span></code> and all of them will run successfully.</p>
+</div></blockquote>
+<p>Try writing and running your own basic operation here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try your own basic operation here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are also more advanced operators, such as those used to make comparisons. These return an output of “True” or “False” depending on whether or not the comparison is true. These comparison operators include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> greater than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> less than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> greater than or equal to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> less than or equal to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> equal to</p></li>
+</ul>
+<p>As an example, try running the code below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The output here is “True” because 1 <em>is</em> less than 4. Try writing and running your own comparison operation here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try your own comparison operation here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To learn more about operators, check out this <a class="reference external" href="https://www.w3schools.com/python/python_operators.asp">list of Python operators</a>.</p>
+</div>
+<div class="section" id="save-variables">
+<h2>2. Save Variables<a class="headerlink" href="#save-variables" title="Permalink to this headline">¶</a></h2>
+<p>Python allows you to create and name containers that you can store your data in. These containers are called <a class="reference external" href="https://www.w3schools.com/python/python_variables.asp">variables</a>. You can name your variable just about anything you want, but the name:</p>
+<ul class="simple">
+<li><p>must contain only letters, numbers, and _ (e.g. cannot contain spaces or symbols like #)</p></li>
+<li><p>can’t start with a number</p></li>
+<li><p>is case sensitive (e.g. number, Number, and NUMBER are three different variables)</p></li>
+</ul>
+<p>For example, try running the code below that creates a variable called <code class="docutils literal notranslate"><span class="pre">myNumber</span></code> and sets its initial value equal to 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myNumber</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A line of code like this that uses the <code class="docutils literal notranslate"><span class="pre">=</span></code> operator is called an assignment statement and sets the value of a variable. Now that the value has been set, try using the variable in the code below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myNumber</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also update the value of your variable by using another assignment statement. Try updating the value of your variable below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myNumber</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now try running this line of code again and see how the output changes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myNumber</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To learn more about variable names, check out this <a class="reference external" href="https://www.w3schools.com/python/python_variables_names.asp">guide to variable names</a>.</p>
+</div>
+<div class="section" id="built-in-functions">
+<h2>3. Built-in Functions<a class="headerlink" href="#built-in-functions" title="Permalink to this headline">¶</a></h2>
+<p>A function is a command in Python that executes a set of pre-written instructions, without you having to write them out each time. You give the function an input and the function runs its instructions and gives you back an output.</p>
+<p>Python has many built-in functions, including the following for popular math equations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abs(x)</span></code> returns the absolute value of x</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">round(x)</span></code> rounds x</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pow(x,y)</span></code> returns the value of x to the power of y</p></li>
+</ul>
+<p>As an example, try running the code below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now try running your own built-in function example here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try running your own built-in function example here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To learn more about built-in functions, check out this <a class="reference external" href="https://www.w3schools.com/python/python_ref_functions.asp">list of built-in Python functions</a>.</p>
+</div>
+<div class="section" id="custom-functions">
+<h2>4. Custom Functions<a class="headerlink" href="#custom-functions" title="Permalink to this headline">¶</a></h2>
+<p>You can also name and write your own custom functions with pre-written instructions that can be saved and used later.</p>
+<p>For example, see this function that adds one to a number:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addOne</span><span class="p">(</span><span class="n">someInputNumber</span><span class="p">):</span>
+    <span class="n">outputNumber</span> <span class="o">=</span> <span class="n">someInputNumber</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="n">outputNumber</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try using this function to add 1 to the number 10 by running <code class="docutils literal notranslate"><span class="pre">addOne(10)</span></code> below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">addOne</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now try using the function on your own number here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try using the addOne function on your own example number here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To learn more about custom functions, check out this <a class="reference external" href="https://www.w3schools.com/python/python_functions.asp">guide to Python functions</a>.</p>
+</div>
+</div>
+<div class="section" id="what-types-of-data-can-python-use">
+<h1>What types of data can Python use?<a class="headerlink" href="#what-types-of-data-can-python-use" title="Permalink to this headline">¶</a></h1>
+<p>Python can work with many different types of data including numbers and text. For a full list, check out this <a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp">list of Python data types</a>.</p>
+<p>For this workshop, will mainly be using the three following basic types of data:</p>
+<table>
+    <tr style="background-color:white; font-weight:bold">
+        <td>Data</td>
+        <td style="text-align:center">Python "Data Type"</td>
+        <td style="text-align:center">Example</td>
+    </tr>
+    <tr>
+        <td>Whole number</td>
+        <td style="text-align:center">int ("integer")</td>
+        <td style="text-align:center">534</td>
+    </tr>
+    <tr style="background-color:white">
+        <td>Decimal</td>
+        <td style="text-align:center">float</td>
+        <td style="text-align:center">6.3</td>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td style="text-align:center">str ("string")</td>
+        <td style="text-align:center">"hello"</td>
+    </tr>
+</table>
+<p>To figure out the type of a particular piece of data, use the built-in <code class="docutils literal notranslate"><span class="pre">type()</span></code> function, like so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;this is some example text&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try testing the data type of your own example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try testing the data type of your own example</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="how-does-python-work-with-text">
+<h1>How does Python work with text?<a class="headerlink" href="#how-does-python-work-with-text" title="Permalink to this headline">¶</a></h1>
+<p>Python has all of the same functionality with text as it has with numbers, with a few subtle changes (e.g. it wouldn’t really make sense to use <code class="docutils literal notranslate"><span class="pre">abs()</span></code> on text). To get a sense of how Python works with text data, check out the examples below.</p>
+<p><strong>Example 1: Basic operators.</strong></p>
+<p>For text, the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator combines text. This action is called “concatenation.” Try concatenating two pieces of text together using the code below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hoo&quot;</span> <span class="o">+</span> <span class="s2">&quot;ray!&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Example 2: Comparison operators.</strong></p>
+<p>For text, the <code class="docutils literal notranslate"><span class="pre">==</span></code> operator can be used to compare two pieces of text, including their capitalization. Try the example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Example&quot;</span> <span class="o">==</span> <span class="s2">&quot;example&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This returns “False” because, although the two words are the same, their capitalization does not match.</p>
+<p><strong>Example 3: Built-in functions.</strong></p>
+<p>For text, there are useful built-in functions such as <code class="docutils literal notranslate"><span class="pre">len()</span></code> which outputs the length of a piece of text. Try the example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;Hooray!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Example 4: Custon functions.</strong></p>
+<p>For text, custom functions can be defined in the same way they could for functions involving numbers. Try using the example function below that makes use of concatenation with the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator and makes use of the built-in <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to output text.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">firstName</span><span class="p">,</span> <span class="n">lastName</span><span class="p">):</span>
+    <span class="n">whatToSay</span> <span class="o">=</span> <span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">firstName</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">lastName</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">whatToSay</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try using the function with your own name by editing and running the code below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># edit this function to use your name</span>
+<span class="n">sayHello</span><span class="p">(</span><span class="s2">&quot;Jacinda&quot;</span><span class="p">,</span><span class="s2">&quot;Ardern&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lesson-complete">
+<h1>Lesson complete!<a class="headerlink" href="#lesson-complete" title="Permalink to this headline">¶</a></h1>
+<p>Next, we’ll look at <span class="xref myst">Significant Terms</span>!</p>
+<p>If you’d like to learn more Python, Constellate has published some great open Jupyter Notebook <a class="reference external" href="https://docs.constellate.org/">lessons</a> including beginner and intermediate Python. There are many additional resources online for learning Python, such as <a class="reference external" href="https://www.py4e.com/">Python for Everybody</a>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sarah Connell, Jen Ferguson, and Kate Kryder<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by/2.0/"><img class="license" alt="Creative Commons License" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /></a> The tutorials and workshop materials are licensed under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons BY License</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-125778965-3', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>
