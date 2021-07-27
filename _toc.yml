@@ -12,10 +12,10 @@
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
-  - file: book/jasfeditedPyNb
-    title: Intro to Jupyter and Python 
-  - file: book/old-add-my-lesson
-    title: Holdover - Add your lesson or class
+  - file: book/Getting Started with Jupyter Notebooks
+    title: Getting Started with Jupyter Notebooks
+  - file: book/Getting Started with Python
+    title: Getting Started with Python
 
 
 - part: Intro to Text Analysis - Finding Signficant Terms 
