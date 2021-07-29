@@ -5,22 +5,22 @@
 
 - part: Create a dataset in Constellate 
   chapters:
-  - file: book/AbouttheCorpus
+  - file: /AbouttheCorpus
     title: About Constellate
   - url: https://constellate.org/docs/user-quick-start
     title: Create a dataset in Constellate - Quickstart guide 
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
-  - file: book/Getting Started with Jupyter Notebooks
+  - file: /Getting Started with Jupyter Notebooks
     title: Getting Started with Jupyter Notebooks
-  - file: book/Getting Started with Python
+  - file: /Getting Started with Python
     title: Getting Started with Python
 
 
 - part: Intro to Text Analysis - Finding Signficant Terms 
   chapters:
-  - file: book/2021SignificantTerms
+  - file: /SignificantTerms
     title: Finding Signifcant Terms
  
 
