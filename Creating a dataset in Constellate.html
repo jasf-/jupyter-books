@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Welcome to your first Jupyter notebook!" href="Getting%20Started%20with%20Jupyter%20Notebooks.html" />
-    <link rel="prev" title="About Constellate.org" href="AbouttheCorpus.html" />
+    <link rel="prev" title="About Constellate" href="About%20Constellate.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -85,7 +85,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="book/intro.html">
-   About
+   About this site
   </a>
  </li>
 </ul>
@@ -96,18 +96,13 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="AbouttheCorpus.html">
+  <a class="reference internal" href="About%20Constellate.html">
    About Constellate
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Creating a Dataset in Constellate
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://constellate.org/docs/user-quick-start">
-   Create a dataset in Constellate - Quickstart guide
+   Building a dataset in Constellate for text analysis
   </a>
  </li>
 </ul>
@@ -142,13 +137,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Holdover - References &amp; more information
+  References &amp; more information
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://constellate.org">
    Constellate Platform
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://constellate.org/docs/user-quick-start">
+   Create a dataset in Constellate - Quickstart guide
   </a>
  </li>
  <li class="toctree-l1">
@@ -272,6 +272,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Building a dataset in Constellate for text analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-complete">
+   Lesson Complete!
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -280,52 +298,49 @@
         
               <div>
                 
-  <p><img alt="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" class="align-left" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /><br/></p>
+  <p><img alt="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" class="align-left" src="https://ithaka-labs.s3.amazonaws.com/static-files/images/tdm/tdmdocs/CC_BY.png" /><br/><br/></p>
 <p>Created by <a class="reference external" href="https://library.northeastern.edu/about/library-staff-directory/jen-ferguson">Jen Ferguson</a>, based on <a class="reference external" href="https://constellate.org/docs/user-quick-start">the Constellate QuickStart guide</a> by Amy Kirchhoff of <a class="reference external" href="https://ithaka.org/">ITHAKA</a>. <br /></p>
 <div class="section" id="building-a-dataset-in-constellate-for-text-analysis">
 <h1>Building a dataset in Constellate for text analysis<a class="headerlink" href="#building-a-dataset-in-constellate-for-text-analysis" title="Permalink to this headline">¶</a></h1>
-<p>Let’s start building a dataset for our text analysis. We’ll be using some resources published by ITHAKA, which you might not have heard of, but JSTOR, which you probably have heard of, is one of their organizations. They have a brand new resource called Constellate that allows you to build and analyze datasets and perform text analysis on their materials (32 million documents!). They’ve been developing some really useful resources for text analysis, which are still in sort of a beta mode, and so we’re one of the groups that get to experiment with these.</p>
+<p>Let’s start building our text analysis dataset.</p>
 <p>Point your browser to <a class="reference external" href="https://constellate.org/">https://constellate.org/</a>. You’ll see a large search box that says ‘build your dataset’.</p>
-<ul class="simple">
-<li><p>(1screenshot)</p></li>
-</ul>
-<p>Drop a word in there on a topic that interests you and start exploring!</p>
-<p>When you click search, you’re going to go into the Dataset Builder with your initial keyword/s filtered.</p>
-<ul class="simple">
-<li><p>(2screenshot with Baseball AND cricket AND “new england” )</p></li>
-</ul>
+<a class="reference internal image-reference" href="_images/Grab1BuildDataset.png"><img alt="_images/Grab1BuildDataset.png" src="_images/Grab1BuildDataset.png" style="width: 600px;" /></a>
+<p>Drop a term in there on a topic that interests you and start exploring!</p>
+<p>When you click search, you’ll go into Constellate’s dataset builder with your initial term in the ‘keyword’ search box.</p>
+<a class="reference internal image-reference" href="_images/Grab2SearchTerms.png"><img alt="_images/Grab2SearchTerms.png" src="_images/Grab2SearchTerms.png" style="width: 600px;" /></a>
 <p>You’ll see filters on the left, and some preliminary visualizations on the right.</p>
-<p><i>Hint: Building a coherent dataset is key to any text analysis. If you’re just exploring, we recommend building a very tight, subject specific dataset. You can do this with some robust keyword filtering, but you might also want to focus on one or two titles. The publications in Reveal Digital are often very narrow and using one of those publications as a source can provide interesting and informative results.</i></p>
-<p>Experiment with the various filters on the left to narrow the documents on your topic of interest. As you change them, the visualizations on the right will change. (Detailed description of these filters: <a class="reference external" href="https://constellate.org/docs/filter-in-the-dataset-builder">https://constellate.org/docs/filter-in-the-dataset-builder</a> )</p>
-<p>The intent behind the visualizations is to give you a peek into your dataset as you’re building it so that you can adjust as you go – but these can stand alone too! You may download any of those visualizations as images or download the data behind them, by selecting the three vertical dots on the top right of each.  You can also create a shareable URL directly to the visualization from that menu.</p>
+<p>Experiment with the various filters on the left to narrow the documents on your topic of interest. As you change them, the visualizations on the right will change. <a class="reference external" href="https://constellate.org/docs/filter-in-the-dataset-builder">See here for a detailed description of these filters.</a></p>
+<p><font color=purple><strong>(Placeholder: WFI from ITHAKA on ballpark dataset size for exploration to insert here)</strong></font></p>
 <ul class="simple">
-<li><p>(3screenshot of one with the vertical dots for sharing)</p></li>
+<li><p>Hint: Building a coherent dataset is key to any text analysis. If you’re just exploring, ITHAKA recommends building a very tight, subject specific dataset. You can do this with some robust keyword filtering, but you might also want to focus on one or two titles. The publications in Reveal Digital are often very narrow and using one of those publications as a source can provide interesting and informative results.</p></li>
 </ul>
-<p>Try adding some words into the term frequency visualization to see how prevalent they are and how they might change over time.</p>
+<p>The intent behind the visualizations is to give you a peek into your dataset as you’re building it so that you can adjust the parameters of your search as you go. But these visualizations can stand alone too! You can download any of the visualizations as images, or download the data behind the visualizations, by selecting the three vertical dots on the top right of each one.  You can also create a shareable URL directly to the visualization from that menu.</p>
+<a class="reference internal image-reference" href="_images/Grab3VizMenu.png"><img alt="_images/Grab3VizMenu.png" src="_images/Grab3VizMenu.png" style="width: 600px;" /></a>
+<p>Try adding some words into the term frequency visualization to see how prevalent they are in your dataset, and how the usage of those words might change over time.</p>
+<a class="reference internal image-reference" href="_images/Grab4TermFreq.png"><img alt="_images/Grab4TermFreq.png" src="_images/Grab4TermFreq.png" style="width: 600px;" /></a>
+<p>At the bottom of the page, you may see some hyperlinked documents from your dataset.
+<a class="reference internal" href="Images/Grab5URLS.png"><img alt="Images/Grab5URLS.png" src="Images/Grab5URLS.png" style="width: 600px;" /></a></p>
+<p>Feel free to click through a URL or two and take a look at the documents.</p>
+<a class="reference internal image-reference" href="_images/Grab6Article.png"><img alt="_images/Grab6Article.png" src="_images/Grab6Article.png" style="width: 600px;" /></a>
+<p>When you’re happy with your configurations and want to save your dataset, go up to the top and select “Build”, then “Confirm”.</p>
+<a class="reference internal image-reference" href="_images/Grab7Build.png"><img alt="_images/Grab7Build.png" src="_images/Grab7Build.png" style="width: 600px;" /></a>
+<p>Once you build the dataset, you’ll notice the page change. You’re now looking at your Dataset Dashboard. This is where all the datasets you have created will live. This is going to save your search and give it a unique identifier called a dataset ID so you can easily get back to it again and share it with others.</p>
+<a class="reference internal image-reference" href="_images/Grab8DataSetID.png"><img alt="_images/Grab8DataSetID.png" src="_images/Grab8DataSetID.png" style="width: 300px;" /></a>
+<p>Note: your dataset may take some time to build, especially if it’s large.</p>
+<p><font color=red> <strong>Important</strong>: </font>
+<strong>If you want to use your dataset for the text analysis lesson, you’ll want to keep track of your dataset ID. It’s a good idea to copy/paste that dataset ID somewhere to ensure that you can return to it later.</strong></p>
+<p>A note about logging in. You have a couple of options under that login button at the top right. <strong>Why might you want to log in?</strong></p>
 <ul class="simple">
-<li><p>(4screenshot: Term frequency)</p></li>
+<li><p>Logging in can allow you to work with bigger datasets: If you look at the very top right of your webpage, does it say “Log in through your institution”?  If so, click the Log in button and choose “Find your Institution to increase access”.  You can then use the JSTOR institution finder to connect to your institution’s network.  If your institution participates in Constellate (as Northeastern does currently), you’ll now be able to work with datasets of up to 50,000 items.</p></li>
+<li><p>Logging in lets you save your dashboard across devices: By default, information about your datasets is being stored in a cookie in your browser.  If you create a user account and log in, your dashboard and dataset information will be saved to the Constellate database and you’ll have access to the same dashboard from any device. As a bonus, you can use that same account to do some extra stuff over on JSTOR as well.</p></li>
 </ul>
-<p>At the bottom of the page, you may see some hyperlinked documents from your dataset. Feel free to click through those and check them out!</p>
-<ul class="simple">
-<li><p>(5Screenshot:ULRS</p></li>
-<li><p>(6Screenshot:civil war article)</p></li>
-</ul>
-<p>When you’re happy with your configurations and want to save your dataset, go up to the top and select “Build” and “confirm”.</p>
-<ul class="simple">
-<li><p>(7Screenshot: build)</p></li>
-</ul>
-<p>You’ll see the page changed! You are now looking at your Dataset Dashboard. This is where all the datasets you have created will live. This is going to save your search and give it a unique identifier, so you can get back to it again easily and share it with others.</p>
-<ul class="simple">
-<li><p>(8screenshot: datasetID)</p></li>
-</ul>
-<p>Your dataset may take some time to build, especially if it’s large.</p>
-<p><strong>If you want to use your dataset in the text analysis lesson in this interactive book, you’ll want to keep that tab open and/or copy/paster your dataset ID somewhere handy</strong></p>
-<p>(Optional/later) Log in.  You have a couple of options under that Login button at the top right. Why?</p>
-<p>Work with bigger datasets: If you look at the very top right of your webpage, does it say “Log in through your institution”?  If so, click the Log in button and choose “Find your Institution to increase access”.  You can then use the JSTOR institution finder to connect to your institution’s network.  If your institution participates in Constellate (as Northeastern does currently), you’ll now be able to work with datasets of up to 50,000 items.</p>
-<p>Save your dashboard across devices: By default, information about your datasets is being stored in a cookie in your browser.  If you create a user account and log-in, your dashboard and dataset information will be saved to the Constellate database and you’ll have access to the same dashboard from any device (as a bonus, you can use that same account to do some extra stuff over on JSTOR, too.)</p>
+</div>
+<div class="section" id="lesson-complete">
+<h1>Lesson Complete!<a class="headerlink" href="#lesson-complete" title="Permalink to this headline">¶</a></h1>
+<p>For more detailed work, we’re going to pull that dataset you generated into a Jupyter Notebook.  Next, we’ll look at <a class="reference internal" href="Getting%20Started%20with%20Jupyter%20Notebooks.html"><span class="doc std std-doc">Getting started with Jupyter Notebooks.</span></a></p>
 <p><strong>More resources</strong></p>
-<p><a class="reference external" href="https://constellate.org/docs/user-quick-start">https://constellate.org/docs/user-quick-start</a></p>
-<p><a class="reference external" href="https://constellate.org/docs/all-about-visualizations">https://constellate.org/docs/all-about-visualizations</a></p>
+<p>Constellate QuickStart Guide: <a class="reference external" href="https://constellate.org/docs/user-quick-start">https://constellate.org/docs/user-quick-start</a></p>
+<p>More about Constellate’s visualizations: <a class="reference external" href="https://constellate.org/docs/all-about-visualizations">https://constellate.org/docs/all-about-visualizations</a></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -353,7 +368,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="AbouttheCorpus.html" title="previous page">About Constellate.org</a>
+    <a class='left-prev' id="prev-link" href="About%20Constellate.html" title="previous page">About Constellate</a>
     <a class='right-next' id="next-link" href="Getting%20Started%20with%20Jupyter%20Notebooks.html" title="next page">Welcome to your first Jupyter notebook!</a>
 
         </div>
