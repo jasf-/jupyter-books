@@ -1,7 +1,7 @@
 <!-- #region -->
-# About
+# About this site
 Welcome to *Python and Text Analysis for Absolute Beginners*! 
-This site is a self-guided version of the [popular workshop of the same name](https://northeastern.libcal.com/event/7768630) run by [NULab for Texts, Maps, and Networks (CSSH)](https://web.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services)
+This site is a self-guided interactive book version of the [popular workshop of the same name](https://northeastern.libcal.com/event/7768630) run by [NULab for Texts, Maps, and Networks (CSSH)](https://web.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services)
 
 Description:
 
@@ -14,9 +14,9 @@ No prior experience with Python, JSTOR, or Jupyter is necessary, and no programm
 
 This site includes 3 lessons:
 
-1. Creating datasets for text analysis in Constellate
-2. Intro to Jupyter Notebooks and Python
-3. Intro to Text Analysis
+1. Create a dataset in Constellate
+2. Intro to Python in Jupyter Notebooks
+3. Intro to text analysis
 
 
 

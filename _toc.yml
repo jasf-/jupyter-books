@@ -5,12 +5,11 @@
 
 - part: Create a dataset in Constellate 
   chapters:
-  - file: /AbouttheCorpus
+  - file: /About Constellate
     title: About Constellate
   - file: /Creating a dataset in Constellate
     title: Creating a Dataset in Constellate
-  - url: https://constellate.org/docs/user-quick-start
-    title: Create a dataset in Constellate - Quickstart guide 
+
 
 - part: Intro to Python in Jupyter Notebooks
   chapters:
@@ -26,10 +25,12 @@
     title: Finding Signifcant Terms
  
 
-- part: Holdover - References & more information
+- part: References & more information
   chapters:
     - url: https://constellate.org
       title: Constellate Platform
+    - url: https://constellate.org/docs/user-quick-start
+      title: Create a dataset in Constellate - Quickstart guide 
     - url: https://constellate.org/docs
       title: Constellate Documentation
     - url: https://constellate.org/docs/key-terms
