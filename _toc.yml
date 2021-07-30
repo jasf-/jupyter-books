@@ -8,7 +8,7 @@
   - file: /About Constellate
     title: About Constellate
   - file: /Creating a dataset in Constellate
-    title: Creating a Dataset in Constellate
+    title: Build a dataset in Constellate
 
 
 - part: Intro to Python in Jupyter Notebooks
@@ -19,25 +19,22 @@
     title: Getting Started with Python
 
 
-- part: Intro to Text Analysis - Finding Signficant Terms 
+- part: Intro to Text Analysis 
   chapters:
   - file: /SignificantTerms
-    title: Finding Signifcant Terms
+    title: Finding signifcant terms
  
 
 - part: References & more information
   chapters:
     - url: https://constellate.org
-      title: Constellate Platform
-    - url: https://constellate.org/docs/user-quick-start
-      title: Create a dataset in Constellate - Quickstart guide 
+      title: Constellate platform
     - url: https://constellate.org/docs
-      title: Constellate Documentation
+      title: Constellate documentation
     - url: https://constellate.org/docs/key-terms
-      title: Text Analysis Glossary
-    - file: book/old-all-notebooks
-      title: Holdover - Open Notebook Lessons Directory
+      title: Text analysis glossary
+    - url: https://ithaka.github.io/tdm-notebooks/book/all-notebooks.html
+      title: More open notebook lessons in Python, text analysis, and R
     - url: https://jupyterbook.org/intro.html
-      title: Jupyter Book Documentation
-    - file: book/keep-learning
-      title: More ways to keep learning
+      title: Jupyter Book documentation
+    
