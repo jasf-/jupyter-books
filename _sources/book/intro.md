@@ -1,7 +1,7 @@
 <!-- #region -->
 # About this site
 Welcome to *Python and Text Analysis for Absolute Beginners*! 
-This site is a self-guided interactive book version of the [popular workshop of the same name](https://northeastern.libcal.com/event/7768630) run by [NULab for Texts, Maps, and Networks (CSSH)](https://web.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services)
+This site is a self-guided interactive book version of the [popular workshop of the same name](https://northeastern.libcal.com/event/7768630) run by [NULab for Texts, Maps, and Networks (CSSH)](https://web.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services).
 
 
 This interactive book includes 3 lessons:
