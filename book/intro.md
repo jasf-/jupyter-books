@@ -22,5 +22,5 @@ All of the teaching materials on this site are licensed under a Creative Commons
 
 ## About this site
 
-This site is a [Jupyter Book](http://jupyterbook.org) version of the [Python and Text Analysis for Absolute Beginners](https://northeastern.libcal.com/event/7768630) workshop run by [the NULab for Texts, Maps, and Networks (CSSH)](https://cssh.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services). This Jupyter Book was created by [Jen Ferguson](mailto:j.ferguson@northeastern.edu).
+This site is a [Jupyter Book](http://jupyterbook.org) version of the [Python and Text Analysis for Absolute Beginners](https://northeastern.libcal.com/event/7768630) workshop run by [the NULab for Texts, Maps, and Networks (CSSH)](https://cssh.northeastern.edu/nulab/) and [Research Data Services (Northeastern University Library)](https://library.northeastern.edu/services/research-data-services). This Jupyter Book was created by [Jen Ferguson](https://library.northeastern.edu/about/library-staff-directory/jen-ferguson).
 <!-- #endregion -->
