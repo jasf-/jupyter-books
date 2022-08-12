@@ -1,3 +1,6 @@
+
+**August 2022: Book needs updating**
+
 [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://jasf-.github.io/py-tdm-book/)
 
 
